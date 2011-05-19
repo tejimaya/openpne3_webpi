@@ -1,0 +1,29 @@
+friend:
+  caption:
+    ja_JP: "フレンド"
+    en: "Friend"
+
+my_friend:
+  caption:
+    ja_JP: "マイフレンド"
+    en: "My Friend"
+
+community:
+  caption:
+    ja_JP: "コミュニティ"
+    en: "Community"
+
+nickname:
+  caption:
+    ja_JP: "ニックネーム"
+    en: "Nickname"
+
+activity:
+  caption:
+    ja_JP: "アクティビティ"
+    en: "Activity"
+
+post_activity:
+  caption:
+    ja_JP: "アクティビティ投稿"
+    en: "Post Activity"

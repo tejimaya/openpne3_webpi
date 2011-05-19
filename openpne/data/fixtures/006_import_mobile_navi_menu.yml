@@ -1,0 +1,40 @@
+Navigation:
+  mobile_home_side_navigation_invite:
+    type: "mobile_home_side"
+    uri: "@member_invite"
+    sort_order: 0
+    Translation:
+      ja_JP:
+        caption: "[i:140]友人を誘う"
+      en:
+        caption: "Invite"
+
+  mobile_home_navigation_friend:
+    type: "mobile_home"
+    uri: "@friend_list"
+    sort_order: 0
+    Translation:
+      ja_JP:
+        caption: "[i:140]ﾏｲﾌﾚﾝﾄﾞ"
+      en:
+        caption: "My Friends"
+
+  mobile_home_navigation_community:
+    type: "mobile_home"
+    uri: "@community_joinlist"
+    sort_order: 10
+    Translation:
+      ja_JP:
+        caption: "[i:155]参加ｺﾐｭﾆﾃｨ"
+      en:
+        caption: "Communities"
+
+  mobile_home_center_navigation_profile:
+    type: "mobile_home_center"
+    uri: "@member_profile_mine"
+    sort_order: 0
+    Translation:
+      ja_JP:
+        caption: "[i:140]ﾌﾟﾛﾌｨｰﾙ"
+      en:
+        caption: "Profile"

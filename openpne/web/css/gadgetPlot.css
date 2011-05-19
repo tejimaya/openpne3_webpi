@@ -1,0 +1,155 @@
+body
+{
+  background-color: #eeeeee;
+}
+
+#plotBody
+{
+  width: 610px;
+  padding: 5px;
+  overflow: visible;
+}
+
+#container
+{
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#plotTop,
+#plotProfileTop
+#plotLoginTop
+{
+  width: 100%;
+}
+
+.layoutA #plotSideMenu,
+.layoutA #plotProfileSideMenu,
+.layoutA #plotLoginSideMenu
+{
+  width: 150px;
+  margin-top: 10px;
+  float: left;
+}
+
+.layoutA #plotContents,
+.layoutA #plotProfileContents,
+.layoutA #plotLoginContents
+{
+  width: 380px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+  display: inline;
+}
+
+.layoutB #plotSideMenu,
+.layoutB #plotProfileSideMenu,
+.layoutB #plotLoginSideMenu
+{
+  width: 100px;
+  float: left;
+}
+
+.layoutB #plotContents,
+.layoutB #plotProfileContents,
+.layoutB #plotLoginContents
+{
+  width: 430px;
+  margin-left: 10px;
+  float: left;
+}
+
+.layoutC #plotContents,
+.layoutC #plotProfileContents,
+.layoutC #plotLoginContents
+{
+  width: 540px;
+  float: left;
+}
+
+#plotBottom,
+#plotProfileBottom,
+#plotLoginBottom
+{
+  width: 100%;
+  float: left;
+}
+
+#plotTop div,
+#plotSideMenu div,
+#plotContents div,
+#plotBottom div,
+#plotProfileTop div,
+#plotProfileSideMenu div,
+#plotProfileContents div,
+#plotProfileBottom div,
+#plotLoginTop div,
+#plotLoginSideMenu div,
+#plotLoginContents div,
+#plotLoginBottom div,
+#plotSideBannerContents div,
+#plotMobileTop div,
+#plotMobileContents div,
+#plotMobileBottom div,
+#plotMobileLoginContents div,
+#plotMobileProfileTop div,
+#plotMobileProfileContents div,
+#plotMobileProfileBottom div,
+#plotMobileHeaderContents div,
+#plotMobileFooterContents div,
+#plotDailyNewsContents div,
+#plotMobileDailyNewsContents div
+{
+  height: 35px;
+  margin-bottom: 5px;
+  text-align: center;
+  border: #000000 1px solid;
+  background-color: #88aaff;
+  padding-top: 10px;
+}
+
+#plotTop div.emptyGadget,
+#plotSideMenu div.emptyGadget,
+#plotContents div.emptyGadget,
+#plotBottom div.emptyGadget,
+#plotProfileTop div.emptyGadget,
+#plotProfileSideMenu div.emptyGadget,
+#plotProfileContents div.emptyGadget,
+#plotProfileBottom div.emptyGadget,
+#plotLoginTop div.emptyGadget,
+#plotLoginSideMenu div.emptyGadget,
+#plotLoginContents div.emptyGadget,
+#plotLoginBottom div.emptyGadget,
+#plotSideBannerContents div.emptyGadget,
+#plotMobileTop div.emptyGadget,
+#plotMobileContents div.emptyGadget,
+#plotMobileBottom div.emptyGadget,
+#plotMobileProfileTop div.emptyGadget,
+#plotMobileProfileContents div.emptyGadget,
+#plotMobileProfileBottom div.emptyGadget,
+#plotMobileLoginContents div.emptyGadget,
+#plotMobileHeaderContents div.emptyGadget,
+#plotMobileFooterContents div.emptyGadget,
+#plotDailyNewsContents div.emptyGadget,
+#plotMobileDailyNewsContents div.emptyGadget
+{
+  background-color: transparent;
+  border-style: dashed;
+}
+
+div.fixedGadget
+{
+  width: 100%;
+  height: 35px;
+  margin-bottom: 5px;
+  text-align: center;
+  border: #000000 1px solid;
+  background-color: #ccc;
+  padding-top: 10px;
+}
+
+.widget{
+  cursor: move;
+}

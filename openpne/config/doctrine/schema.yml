@@ -1,0 +1,641 @@
+options:
+  charset: utf8
+actAs: [Timestampable]
+
+Member:
+  actAs: [Timestampable, opActivateBehavior]
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Nickname" }
+    invite_member_id: { type: integer(4), comment: "Member id of the person who invited this member" }
+    is_login_rejected: { type: boolean, notnull: true, default: false, comment: "Rejected member" }
+  relations:
+    Member: { local: invite_member_id, foreign: id, onDelete: set null }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of members"
+
+MemberRelationship:
+  actAs: [Timestampable, opActivityCascadingBehavior]
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    member_id_to: { type: integer(4), notnull: true, comment: "Target member id" }
+    member_id_from: { type: integer(4), notnull: true, comment: "Subject member id" }
+    is_friend: { type: boolean, comment: "The members are friends" }
+    is_friend_pre: { type: boolean, comment: "The members are going to be friends" }
+    is_access_block: { type: boolean, comment: "The subject member is blocked the target" }
+  relations:
+    Member: { local: member_id_to, foreign: id, onDelete: cascade }
+    MemberRelatedByMemberIdFrom: { class: Member, local: member_id_from, foreign: id, onDelete: cascade }
+  indexes:
+    member_id_to_from_UNIQUE:
+      fields: [member_id_to, member_id_from]
+      type: unique
+    member_id_from_to_UNIQUE:
+      fields: [member_id_from, member_id_to]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves ralationships of each members"
+
+MemberImage:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    member_id: { type: integer(4), notnull: true, comment: "Member id" }
+    file_id: { type: integer(4), notnull: true, comment: "Image file id in the ''file'' table" }
+    is_primary: { type: boolean, comment: "This is primary" }
+  relations:
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+    File: { local: file_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves images in member profiles"
+
+File:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "File name" }
+    type: { type: string(64), default: "", notnull: true, comment: "Type of this file" }
+    filesize: { type: integer(4), default: 0, notnull: true, comment: "File size" }
+    original_filename: { type: string, comment: "Original filename" }
+  indexes:
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of files uploaded"
+
+FileBin:
+  columns:
+    file_id: { type: integer(4), primary: true, comment: "File id" }
+    bin: { type: blob, comment: "Content of file" }
+  relations:
+    File: { local: file_id, foreign: id, onDelete: cascade, foreignType: one, owningSide: true }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves content of files"
+
+Profile:
+  actAs:
+    I18n:
+      fields: [caption, info]
+      length: 5
+    Timestampable:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Identified profile name (ASCII)" }
+    is_required: { type: boolean, default: false, notnull: true, comment: "This is a required" }
+    is_unique: { type: boolean, default: false, notnull: true, comment: "Cannot select duplicate item" }
+    is_edit_public_flag: { type: boolean, default: false, notnull: true, comment: "Settable public flag" }
+    default_public_flag: { type: integer(1), default: '1', notnull: true, comment: "Default of public flag" }
+    form_type: { type: string(32), default: "", notnull: true, comment: "Form type to input/select" }
+    value_type: { type: string(32), default: "", notnull: true, comment: "Type of input value" }
+    is_disp_regist: { type: boolean, default: false, notnull: true, comment: "Shows when registeration" }
+    is_disp_config: { type: boolean, default: false, notnull: true, comment: "Shows when edit" }
+    is_disp_search: { type: boolean, default: false, notnull: true, comment: "Shows when searching" }
+    is_public_web: { type: boolean, notnull: true, default: false, comment: "Flag for adding public_flag for publishing to web" }
+    value_regexp: { type: string, comment: "Regular expression" }
+    value_min: { type: string(32), comment: "Minimum value" }
+    value_max: { type: string(32), comment: "Maximum value" }
+    sort_order: { type: integer(4), comment: "Order to sort" }
+    caption: { type: string, notnull: true, comment: "Item name to show" }
+    info: { type: string, comment: "Description" }
+  indexes:
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves input/select items for the member profile"
+
+ProfileOption:
+  actAs:
+    I18n:
+      fields: [value]
+      length: 5
+    Timestampable:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    profile_id: { type: integer(4), notnull: true, comment: "Profile id" }
+    value: { type: string, comment: "Choice" }
+    sort_order: { type: integer(4), comment: "Order to sort" }
+  relations:
+    Profile: { local: profile_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves options of profile items"
+
+MemberProfile:
+  actAs:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: tree_key
+    Timestampable:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    member_id: { type: integer(4), notnull: true, comment: "Member id" }
+    profile_id: { type: integer(4), notnull: true, comment: "Profile id" }
+    profile_option_id: { type: integer(4), comment: "Profile option id" }
+    value: { type: string, default: "", notnull: true, comment: "Text content for this profile item" }
+    value_datetime: { type: timestamp, comment: "Profile datetime value" }
+    public_flag: { type: integer(1), comment: "Public flag" }
+  relations:
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+    Profile: { local: profile_id, foreign: id, onDelete: cascade }
+    ProfileOption: { local: profile_option_id, foreign: id, onDelete: cascade }
+  indexes:
+    lft_INDEX:
+      fields: [lft]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of every member''s profile"
+
+Community:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Community name" }
+    file_id: { type: integer(4), comment: "Top image file id" }
+    community_category_id: { type: integer(4), comment: "Community category id" }
+  relations:
+    File: { local: file_id, foreign: id, onDelete: set null }
+    CommunityCategory: { local: community_category_id, foreign: id, onDelete: set null }
+  indexes:
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of communities"
+
+CommunityMember:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    community_id: { type: integer(4), notnull: true, comment: "Community id" }
+    member_id: { type: integer(4), notnull: true, comment: "Member id" }
+    is_pre: { type: boolean, notnull: true, default: false, comment: "Is pre member?" }
+    is_receive_mail_pc: { type: boolean, default: false, notnull: true, comment: "Notification of posting in community by computer E-mail." }
+    is_receive_mail_mobile: { type: boolean, default: false, notnull: true, comment: "Notification of posting in community by mobile E-mail." }
+  relations:
+    Community: { local: community_id, foreign: id, onDelete: cascade }
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of members joined"
+
+CommunityMemberPosition:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    community_id: { type: integer(4), notnull: true, comment: "Community id" }
+    member_id:    { type: integer(4), notnull: true, comment: "Member id" }
+    community_member_id: { type: integer(4), notnull: true, comment: "Community Member id" }
+    name: { type: string(32), notnull: true, comment: "Member''s position name in this community" }
+  indexes:
+    name_UNIQUE:
+      fields: [community_member_id, name]
+      type: unique
+  relations:
+    Community: { local: community_id, foreign: id, onDelete: cascade }
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+    CommunityMember: { local: community_member_id, foreign: id, onDelete:cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of the Community''s member roles"
+
+AdminUser:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    username: { type: string(64), default: "", notnull: true, comment: "Administrator''s username" }
+    password: { type: string(40), default: "", notnull: true, comment: "Administrator''s password" }
+  indexes:
+    username_UNIQUE:
+      fields: [username]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations to login administration page"
+
+SnsConfig:
+  actAs: []
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Configuration name" }
+    value: { type: string, comment: "Configuration value" }
+  indexes:
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves configurations of this SNS"
+
+MemberConfig:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    member_id: { type: integer(4), notnull: true, comment: "Member id" }
+    name: { type: string(64), default: "", notnull: true, comment: "Configuration name" }
+    value: { type: string, default: "", notnull: true, comment: "Configuration value" }
+    value_datetime: { type: timestamp, comment: "Configuration datetime value" }
+    name_value_hash: { type: string(32), notnull: true, comment: "Hash value for searching name & value" }
+  relations:
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+  indexes:
+    name_INDEX:
+      fields: [name]
+    name_value_hash_INDEX:
+      fields: [name_value_hash]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves configurations of each members"
+
+CommunityConfig:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    community_id: { type: integer(4), notnull: true, comment: "Community id" }
+    name: { type: string(64), default: "", notnull: true, comment: "Configuration name" }
+    value: { type: string, comment: "Configuration value" }
+  relations:
+    Community: { local: community_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves configurations of communities"
+
+CommunityCategory:
+  actAs:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: tree_key
+    Timestampable:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Category name" }
+    is_allow_member_community: { type: boolean, default: true, notnull: true, comment: "Member can create this category community" }
+    tree_key: { type: integer(4), comment: "Nested tree key" }
+    sort_order: { type: integer(4), comment: "Order to sort" }
+  indexes:
+    lft_INDEX:
+      fields: [lft]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves categories of community"
+
+Gadget:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    type: { type: string(64), default: "", notnull: true, comment: "Gadget type" }
+    name: { type: string(64), default: "", notnull: true, comment: "Gadget name" }
+    sort_order: { type: integer(4), comment: "Order to sort" }
+  indexes:
+    sort_order_INDEX:
+      fields: [sort_order]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of gadget"
+
+GadgetConfig:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Configuration name" }
+    gadget_id: { type: integer(4), comment: "Gadget id" }
+    value: { type: string, comment: "Configuration value" }
+  relations:
+    Gadget: { local: gadget_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves configurations of gadget"
+
+Navigation:
+  actAs:
+    I18n:
+      fields: [caption]
+      length: 5
+    Timestampable:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    caption: { type: string, notnull: true, comment: "Description" }
+    type: { type: string(64), default: "", notnull: true, comment: "Navigation type" }
+    uri: { type: string, notnull: true, comment: "Linked page''s URI" }
+    sort_order: { type: integer(4), comment: "Order to sort" }
+  indexes:
+    type_sort_order_INDEX:
+      fields: [type, sort_order]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of navigation items"
+
+Blacklist:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    uid: { type: string(32), default: "", notnull: true, comment: "Mobile identified number" }
+    memo: { type: string, comment: "Free memo" }
+  indexes:
+    uid_UNIQUE:
+      fields: [uid]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of blacklist"
+
+OAuthConsumerInformation:
+  tableName: oauth_consumer
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Consumer name" }
+    description: { type: string, comment: "Consumer description" }
+    key_string: { type: string(16), default: "", notnull: true, comment: "Token for this consumer" }
+    secret: { type: string(32), default: "", notnull: true, comment: "Password for this consumer" }
+    file_id: { type: integer(4), comment: "Image file id of this consumer" }
+    using_apis: { type: array, comment: "API list that this consumer uses" }
+    member_id: { type: integer(4), notnull: false, comment: "Member id" }
+  relations:
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+    Image: { class: File, local: file_id, foreign: id, onDelete: set null }
+  indexes:
+    key_secret_UNIQUE:
+      fields: [key_string, secret]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of OAuth Consumer"
+
+OAuthAbstractToken:
+  abstract: true
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    oauth_consumer_id: { type: integer(4), notnull: true, comment: "OAuth Consumer id" }
+    key_string: { type: string(16), default: "", notnull: true, comment: "Key string of this token" }
+    secret: { type: string(32), default: "", notnull: true, comment: "Secret string of this token" }
+    type: { type: enum, values: [request, access], default: "request", comment: "Token type" }
+    is_active: { type: boolean, default: true, notnull: true, comment: "Activation flag" }
+    callback_url: { type: string, comment: "Callback url" }
+    verifier: { type: string, comment: "Token verifier" }
+  indexes:
+    key_secret_UNIQUE:
+      fields: [key_string, secret]
+      type: unique
+
+OAuthAdminToken:
+  inheritance:
+    extends: OAuthAbstractToken
+    type: concrete
+  relations:
+    Consumer: { class: OAuthConsumerInformation, local: oauth_consumer_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves administration tokens of OAuth"
+
+OAuthMemberToken:
+  inheritance:
+    extends: OAuthAbstractToken
+    type: concrete
+  columns:
+    member_id: { type: integer(4), notnull: false, comment: "Member id" }
+  relations:
+    Consumer: { class: OAuthConsumerInformation, local: oauth_consumer_id, foreign: id, onDelete: cascade }
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves memebr tokens of OAuth"
+
+Banner:
+  actAs:
+    I18n:
+      fields: [caption]
+      length: 5
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Banner name" }
+    html: { type: string, comment: "HTML of free input banner" }
+    is_use_html: { type: boolean, default: false, notnull: true, comment: "This is free HTML banner" }
+    caption: { type: string, notnull: true, comment: "Description" }
+  indexes:
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations about banner"
+
+BannerImage:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    file_id: { type: integer(4), notnull: true, comment: "An image''s file id" }
+    url: { type: string, comment: "URL of linked Web page" }
+    name: { type: string(64), comment: "Banner image name" }
+  relations:
+    File: { local: file_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations about banner image files"
+
+BannerUseImage:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    banner_id: { type: integer(4), notnull: true, comment: "Banner id" }
+    banner_image_id: { type: integer(4), notnull: true, comment: "BannerImage id" }
+  relations:
+    Banner: { local: banner_id, foreign: id }
+    BannerImage: { local: banner_image_id, foreign: id }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves relations between banners and their images"
+
+Session:
+  actAs: []
+  columns:
+    id: { type: string(128), primary: true }
+    session_data: { type: string, comment: "Session information" }
+    time: { type: string, comment: "Timestamp of generated time" }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves session data"
+
+OpenIDTrustLog:
+  tableName: openid_trust_log
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    member_id: { type: integer(4), notnull: false, comment: "Member id" }
+    uri: { type: string, comment: "URI for RP" }
+    uri_key: { type: string(32), comment: "Hashed URI for RP" }
+    is_permanent: { type: boolean, comment: "A permanent flag" }
+  relations:
+    Member: { local: member_id, foreign: id, onDelete: cascade }
+  indexes:
+    uri_key_INDEX:
+      fields: [uri_key]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves logs of trusted OpenID RP"
+
+SnsTerm:
+  actAs:
+    I18n:
+      fields: [value]
+      length: 5
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Term name" }
+    application: { type: string(32), default: "pc_frontend", notnull: true, comment: "Application name" }
+    value: { type: string, comment: "Term value" }
+  indexes:
+    application_INDEX:
+      fields: [application]
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves terms of this SNS"
+
+NotificationMail:
+  actAs:
+    I18n:
+      fields: [title, template]
+      length: 5
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Notification Identifier Name" }
+    title: { type: string(64), default: "", notnull: true, comment: "Notification Title" }
+    template: { type: string, default: "", notnull: true, comment: "Notification Template" }
+    renderer: { type: string(64), default: "twig", notnull: true, comment: "Notification Template Renderer" }
+    is_enabled: { type: boolean, default: true, notnull: true, comment: "Notification Enabled" }
+  indexes:
+    is_enabled_INDEX:
+      fields: [is_enabled]
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves configuration of notification mail"
+
+Plugin:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    name: { type: string(64), default: "", notnull: true, comment: "Nickname" }
+    is_enabled: { type: boolean, default: true, notnull: true, comment: "Notification Enabled" }
+  indexes:
+    is_enabled_INDEX:
+      fields: [is_enabled]
+    name_UNIQUE:
+      fields: [name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves informations of plugins"
+
+SkinConfig:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    plugin: { type: string(64), default: "", notnull: true, comment: "Plugin name" }
+    name: { type: string(64), default: "", notnull: true, comment: "Configuration name" }
+    value: { type: string, comment: "Configuration value" }
+  indexes:
+    plugin_name_UNIQUE:
+      fields: [plugin, name]
+      type: unique
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves configurations of this SNS"
+
+ActivityData:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    member_id: { type: integer(4), notnull: true, comment: "Member id" }
+    in_reply_to_activity_id: { type: integer(4), comment: "Activity data id is in reply to" }
+    body: { type: string(140), notnull: true, comment: "Activity body" }
+    uri: { type:string, comment: "Activity URI" }
+    public_flag: { type: integer(1), notnull: true, default: 1, comment: "Public flag of activity" }
+    is_pc: { type: boolean, notnull: true, default: 1, comment: "Display this in PC?" }
+    is_mobile: { type: boolean, notnull: true, default: 1, comment: "Display this in Mobile?"} 
+    source: { type: string(64), comment: "The source caption" }
+    source_uri: { type: string , comment: "The source URI" }
+    foreign_table: { type: string, comment: "Reference table name" }
+    foreign_id: { type: integer, comment: "The id of reference table" }
+    template: { type: string(64), comment: "Template name" }
+    template_param: { type: array, comment: "Params for template" }
+  relations:
+    Member: { foreignAlias: Activities, local: member_id, foreign: id, onDelete: cascade }
+    InReplyTo: { class: ActivityData, local: in_reply_to_activity_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves activities"
+
+ActivityImage:
+  columns:
+    id: { type: integer(4), primary: true, autoincrement: true, comment: "Serial number" }
+    activity_data_id: { type: integer(4), notnull: true, comment: "Activity data id" }
+    mime_type: { type: string(64), notnull: true, comment: "MIME type" }
+    uri: { type: string, comment: "Image URI" }
+    file_id: { type: integer(4), comment: "File id" }
+  relations:
+    ActivityData: { foreignAlias: Images, local: activity_data_id, foreign: id, onDelete: cascade }
+    File: { local: file_id, foreign: id, onDelete: cascade }
+  options:
+    type: INNODB
+    collate: utf8_unicode_ci
+    charset: utf8
+    comment: "Saves image information of activity"

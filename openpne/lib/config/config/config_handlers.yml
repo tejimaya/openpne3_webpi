@@ -1,0 +1,39 @@
+data/config/plugin.yml:
+  class: opPluginConfigHandler
+  file:  %SF_LIB_DIR%/config/opPluginConfigHandler.class.php
+
+config/gadget_config.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/gadget_layout_config.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/mobile_mail_domain.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/mobile_ip_address.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/sns_term.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/mail_template.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/confirmation.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/monitoring.yml:
+  class: sfSimpleYamlConfigHandler
+
+modules/*/config/security.yml:
+  class:    opSecurityConfigHandler
+
+config/mobile_preset_color.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/regions.yml:
+  class: sfSimpleYamlConfigHandler
+
+config/activity_template.yml:
+  class: sfSimpleYamlConfigHandler

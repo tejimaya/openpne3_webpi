@@ -1,0 +1,51 @@
+Member:
+  first_member:
+    name: "OpenPNE君"
+    is_active: 1
+
+MemberProfile:
+  first_member_profile_sex:
+    value: "Man"
+    public_flag: 1
+    Member: first_member
+    Profile: profile_sex
+
+  first_member_profile_birthday:
+    value: "1988-04-23"
+    public_flag: 1
+    Member: first_member
+    Profile: profile_birthday
+
+  first_member_profile_region:
+    value: "Tokyo"
+    public_flag: 1
+    Member: first_member
+    Profile: profile_region
+
+  first_member_profile_self_intro:
+    value: "よろしくお願いします。"
+    public_flag: 1
+    Member: first_member
+    Profile: profile_self_intro
+
+MemberConfig:
+  first_member_pc_address:
+    name: "pc_address"
+    value: "sns@example.com"
+    Member: first_member
+
+  first_member_password:
+    name: "password"
+    value: <?php echo md5('password') . "\n"; ?>
+    Member: first_member
+
+  first_member_secret_question:
+    name: "secret_question"
+    value: "5"
+    Member: first_member
+
+  first_member_secret_answer:
+    name: "secret_answer"
+    value: "<?php echo md5('東京都'); ?>"
+    Member: first_member
+

@@ -1,0 +1,856 @@
+Profile:
+  profile_sex:
+    name: "op_preset_sex"
+    is_required: 1
+    form_type: "select"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 0
+    default_public_flag: 1
+    sort_order: 110
+
+  profile_birthday:
+    name: "op_preset_birthday"
+    is_required: 0
+    form_type: "date"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 0
+    default_public_flag: 1
+    sort_order: 120
+
+  profile_region:
+    name: "op_preset_region"
+    is_required: 0
+    form_type: "region_select"
+    value_type: "JP"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    default_public_flag: 1
+    sort_order: 125
+
+  profile_self_intro:
+    name: "op_preset_self_introduction"
+    is_required: 0
+    form_type: "textarea"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    default_public_flag: 1
+    sort_order: 130
+
+  profile_select_item:
+    name: "select_item"
+    is_required: 0
+    form_type: "select"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    default_public_flag: 1
+    sort_order: 1000
+
+  profile_checkbox_item:
+    name: "checkbox_item"
+    is_required: 0
+    form_type: "checkbox"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    default_public_flag: 1
+    sort_order: 1010
+
+  profile_date_item:
+    name: "date_item"
+    is_required: 0
+    form_type: "date"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    default_public_flag: 1
+    sort_order: 1020
+
+  web_item:
+    name: "web_item"
+    is_required: 0
+    form_type: "input"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    is_public_web: 1
+    default_public_flag: 4
+    sort_order: 1030
+
+  not_web_item:
+    name: "not_web_item"
+    is_required: 0
+    form_type: "input"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 1
+    is_public_web: 0
+    default_public_flag: 4
+    sort_order: 1040
+
+ProfileOption:
+  profile_option_select_item1:
+    sort_order: 10
+    Profile: profile_select_item
+    Translation:
+      ja_JP:
+        value: "あ"
+      en:
+        value: "A"
+
+  profile_option_select_item2:
+    sort_order: 0
+    Profile: profile_select_item
+    Translation:
+      ja_JP:
+        value: "い"
+      en:
+        value: "B"
+
+  profile_option_checkbox_item1:
+    sort_order: 0
+    Profile: profile_checkbox_item
+    Translation:
+      ja_JP:
+        value: "う"
+      en:
+        value: "C"
+
+  profile_option_checkbox_item2:
+    sort_order: 1
+    Profile: profile_checkbox_item
+    Translation:
+      ja_JP:
+        value: "え"
+      en:
+        value: "D"
+
+  profile_option_date_year:
+    sort_order: 0
+    Profile: profile_date_item
+
+  profile_option_date_month:
+    sort_order: 1
+    Profile: profile_date_item
+
+  profile_option_date_day:
+    sort_order: 2
+    Profile: profile_date_item
+
+Member:
+  first_member:
+    name: "A"
+    is_active: 1
+  second_member:
+    name: "B"
+    Member: first_member
+    is_active: 1
+  third_member:
+    name: "C"
+    is_active: 1
+  fourth_member:
+    name: "D"
+    is_active: 1
+  fifth_member:
+    name: "E"
+    is_active: 1
+  sixth_member:
+    name: "F"
+    is_active: 1
+  seventh_member:
+    name: "G"
+    is_active: 1
+  eighth_member:
+    name: "H"
+    is_active: 1
+
+File:
+  dummy_file1:
+    name: "dummy_file"
+    type: "image/png"
+    original_filename: "dummy.png"
+    FileBin:
+      bin: ~
+  dummy_file2:
+    name: "dummy_file2"
+    type: "image/jpeg"
+    original_filename: "dummy.jpg"
+    FileBin:
+      bin: ~
+  dummy_file3:
+    name: "dummy_file3"
+    type: "text/plain"
+    original_filename: "dummy.txt"
+    FileBin:
+      bin: ~
+
+MemberImage:
+  first_member_image1:
+    is_primary: 1
+    Member: first_member
+    File: dummy_file3
+  first_member_image2:
+    Member: first_member
+    File: dummy_file1
+  second_member_image1:
+    Member: second_member
+    File: dummy_file1
+
+MemberProfile:
+  first_member_profile_sex:
+    value: "Man"
+    public_flag: 1
+    Member: first_member
+    Profile: profile_sex
+    children: []
+
+  first_member_profile_birthday:
+    value: "1988-04-23"
+    value_datetime: "1988-04-23"
+    public_flag: 1
+    Member: first_member
+    Profile: profile_birthday
+    children: []
+
+  first_member_profile_region:
+    value: "Tokyo"
+    public_flag: 2
+    Member: first_member
+    Profile: profile_region
+    children: []
+
+  first_member_profile_self_intro:
+    value: "よろしくお願いします。"
+    public_flag: 3
+    Member: first_member
+    Profile: profile_self_intro
+    children: []
+
+  first_member_profile_select_item:
+    public_flag: 1
+    Profile: profile_select_item
+    ProfileOption: profile_option_select_item1
+    Member: first_member
+    children: []
+
+  first_member_profile_option_item:
+    public_flag: 1
+    Profile: profile_checkbox_item
+    Member: first_member
+    children:
+      first_member_profile_option_item_1:
+        Member: first_member
+        Profile: profile_checkbox_item
+        ProfileOption: profile_option_checkbox_item1
+      first_member_profile_option_item2:
+        Member: first_member
+        Profile: profile_checkbox_item
+        ProfileOption: profile_option_checkbox_item2
+
+  first_member_profile_date_item:
+    public_flag: 1
+    Profile: profile_date_item
+    Member: first_member
+    children:
+      first_member_profile_date_day:
+        Member: first_member
+        Profile: profile_date_item
+        ProfileOption: profile_option_date_day
+        value: 8
+      first_member_profile_date_month:
+        Member: first_member
+        Profile: profile_date_item
+        ProfileOption: profile_option_date_month
+        value: 1
+      first_member_profile_date_year:
+        Member: first_member
+        Profile: profile_date_item
+        ProfileOption: profile_option_date_year
+        value: 1989
+
+  first_member_profile_web_item:
+    value: "Web に公開します"
+    public_flag: 4
+    Member: first_member
+    Profile: web_item
+    children: []
+
+  first_member_profile_not_web_item:
+    value: "Web に公開できません"
+    public_flag: 4
+    Member: first_member
+    Profile: not_web_item
+    children: []
+
+  second_member_profile_option_item:
+    public_flag: 1
+    Profile: profile_checkbox_item
+    Member: second_member
+    children:
+      second_member_profile_option_item_1:
+        Member: second_member
+        Profile: profile_checkbox_item
+        ProfileOption: profile_option_checkbox_item1
+
+  second_member_profile_web_item:
+    value: "Web に公開しません"
+    public_flag: 1
+    Member: second_member
+    Profile: web_item
+    children: []
+
+  second_member_profile_not_web_item:
+    value: "Web に公開できません"
+    public_flag: 1
+    Member: second_member
+    Profile: not_web_item
+    children: []
+
+  second_member_profile_birthday:
+    value: ""
+    value_datetime: ""
+    public_flag: 1
+    Member: second_member
+    Profile: profile_birthday
+    children: []
+
+MemberConfig:
+  first_member_pc_address:
+    name: "pc_address"
+    value: "sns@example.com"
+    Member: first_member
+
+  first_member_mobile_address:
+    name: "mobile_address"
+    value: "sns@m.example.com"
+    Member: first_member
+
+  first_member_password:
+    name: "password"
+    value: <?php echo md5('password') . "\n"; ?>
+    Member: first_member
+
+  second_member_pc_address_pre:
+    name: "pc_address_pre"
+    value: "sns2@example.com"
+    Member: second_member
+
+  third_member_pc_address_pre:
+    name: "pc_address_pre"
+    value: "sns2@example.com"
+    Member: third_member
+
+AdminUser:
+  first_admin:
+    id: ~
+    username: "admin"
+    password: "password"
+
+Navigation:
+  secure_global_navigation_home:
+    type: "secure_global"
+    uri: "@homepage"
+    sort_order: 0
+    Translation:
+      ja_JP:
+        caption: "マイホーム"
+      en:
+        caption: "My Home"
+
+  default_navigation_home:
+    type: "default"
+    uri: "@homepage"
+    sort_order: 0
+    Translation:
+      ja_JP:
+        caption: "ホーム"
+      en:
+        caption: "Home"
+
+  friend_navigation_home:
+    type: "friend"
+    uri: "member/profile"
+    sort_order: 10
+    Translation:
+      ja_JP:
+        caption: "ホーム"
+      en:
+        caption: "Home"
+
+  community_navigation_home:
+    type: "community"
+    uri: "community/home"
+    sort_order: 0
+    Translation:
+      ja_JP:
+        caption: "コミュニティトップ"
+      en:
+        caption: "Community Top"
+
+MemberRelationship:
+  first_member_second_member:
+    Member: first_member
+    MemberRelatedByMemberIdFrom: second_member
+    is_friend: 1
+  second_member_first_member:
+    Member: second_member
+    MemberRelatedByMemberIdFrom: first_member
+    is_friend: 1
+  fourth_member_first_member:
+    Member: fourth_member
+    MemberRelatedByMemberIdFrom: first_member
+    is_friend: 1
+  sixth_member_first_member:
+    Member: sixth_member
+    MemberRelatedByMemberIdFrom: first_member
+  seventh_member_first_member:
+    Member: seventh_member
+    MemberRelatedByMemberIdFrom: first_member
+    is_friend: 1
+  eighth_member_first_member:
+    Member: eighth_member
+    MemberRelatedByMemberIdFrom: first_member
+    is_friend: 1
+  first_member_fourth_member:
+    Member: first_member
+    MemberRelatedByMemberIdFrom: fourth_member
+    is_friend_pre: 1
+  fifth_member_first_member:
+    Member: fifth_member
+    MemberRelatedByMemberIdFrom: first_member
+    is_access_block: 1
+
+Community:
+  community_1:
+    name: "CommunityA"
+    File: dummy_file1
+  community_2:
+    name: "CommunityB"
+  community_3:
+    name: "CommunityC"
+  community_4:
+    name: "CommunityD"
+  community_5:
+    name: "CommunityE"
+
+CommunityCategory:
+  community_category:
+    name: "コミュニティカテゴリ"
+    is_allow_member_community: 1
+
+  community_category_1:
+    name: "CategoryA"
+    tree_key: 1
+    is_allow_member_community: 1
+    sort_order: 2
+  community_category_2:
+    name: "CategoryB"
+    tree_key: 1
+    is_allow_member_community: 1
+    sort_order: 1
+
+CommunityConfig:
+  community_1_description:
+    Community: community_1
+    name: "description"
+    value: "IDが1番のコミュニティ"
+  community_1_register_policy:
+    Community: community_1
+    name: "register_policy"
+    value: "open"
+  community_1_is_default:
+    Community: community_1
+    name: "is_default"
+    value: true
+  community_2_register_policy:
+    Community: community_2
+    name: "register_policy"
+    value: "close"
+  community_3_is_default:
+    Community: community_3
+    name: "is_default"
+    value: true
+
+CommunityMember:
+  community_1_first_member:
+    Community: community_1
+    Member: first_member
+  community_1_second_member:
+    Community: community_1
+    Member: second_member
+  community_2_second_member:
+    Community: community_2
+    Member: second_member
+  community_3_first_member:
+    Community: community_3
+    Member: first_member
+  Community_3_second_member:
+    Community: community_3
+    Member: second_member
+  community_4_first_member:
+    Community: community_4
+    Member: first_member
+  community_4_second_member:
+    Community: community_4
+    Member: second_member
+  community_5_first_member:
+    Community: community_5
+    Member: first_member
+  community_5_second_member:
+    Community: community_5
+    Member: second_member
+  community_5_third_member:
+    Community: community_5
+    Member: third_member
+  community_5_fourth_member:
+    Community: community_5
+    Member: fourth_member
+    is_pre: true
+  community_5_fifth_member:
+    Community: community_5
+    Member: fifth_member
+
+CommunityMemberPosition:
+  community_1_admin:
+    Community: community_1
+    Member: first_member
+    CommunityMember: community_1_first_member
+    name: "admin"
+  community_2_admin:
+    Community: community_2
+    Member: second_member
+    CommunityMember: community_2_second_member
+    name: "admin"
+  community_3_admin:
+    Community: community_3
+    Member: first_member
+    CommunityMember: community_3_first_member
+    name: "admin"
+  community_4_admin:
+    Community: community_4
+    Member: first_member
+    CommunityMember: community_4_first_member
+    name: "admin"
+  community_4_admin_confirm:
+    Community: community_4
+    Member: second_member
+    CommunityMember: community_4_second_member
+    name: "admin_confirm"
+  community_5_admin:
+    Community: community_5
+    Member: first_member
+    CommunityMember: community_5_first_member
+    name: "admin"
+  community_5_sub_admin:
+    Community: community_5
+    Member: second_member
+    CommunityMember: community_5_second_member
+    name: "sub_admin"
+  community_5_sub_admin_confirm:
+    Community: community_5
+    Member: third_member
+    CommunityMember: community_5_third_member
+    name: "sub_admin_confirm"
+
+Gadget:
+  gadget_search:
+    type: "top"
+    name: "searchBox"
+    sort_order: 10
+
+  gadget_member_image:
+    type: "sideMenu"
+    name: "memberImageBox"
+    sort_order: 10
+
+  gadget_friend_list_box:
+    type: "sideMenu"
+    name: "friendListBox"
+    sort_order: 20
+
+  gadget_language_select_box:
+    type: "sideBannerContents"
+    name: "languageSelecterBox"
+    sort_order: 10
+
+  mobile_gadget_information:
+    type: "mobileTop"
+    name: "informationBox"
+    sort_order: 10
+
+  login_gadget_login_form_box:
+    type: "loginTop"
+    name: "loginForm"
+    sort_order: 10
+
+  mobile_login_gadget_login_form_box:
+    type: "mobileLoginContents"
+    name: "loginForm"
+    sort_order: 10
+
+  profile_gadget_member_image:
+    type: "profileSideMenu"
+    name: "memberImageBox"
+    sort_order: 10
+
+  profile_gadget_profile:
+    type: "profileContents"
+    name: "profileListBox"
+    sort_order: 10
+
+  mobile_profile_gadget_friend_table:
+    type: "mobileProfileBottom"
+    name: "friendListBox"
+    sort_order: 10
+
+GadgetConfig:
+  gadget_friend_list_box_config_row:
+    Gadget: gadget_friend_list_box
+    name: "row"
+    value: 1
+
+SnsConfig:
+  sns_config1:
+    name: "sns_name"
+    value: "test1"
+  sns_config2:
+    name: "daily_news_day"
+    value: ""
+
+Blacklist:
+  dummy_black_uid:
+    uid: "TEST"
+
+OAuthConsumerInformation:
+  dummy_consumer_information1:
+    name: "test1"
+    description: "testtest"
+    key_string: "AAAAAAAAAAAAAAAA"
+    secret: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    Image: dummy_file1
+    using_apis: ["webapi_member_get"]
+
+  dummy_consumer_information2:
+    name: "test2"
+    description: "testtest"
+    key_string: "BBBBBBBBBBBBBBBB"
+    secret: "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+    Image: dummy_file1
+    using_apis: ["webapi_member_get"]
+    Member: first_member
+
+OAuthAdminToken:
+  dummy_admin_token1:
+    Consumer: dummy_consumer_information1
+    key_string: "CCCCCCCCCCCCCCCC"
+    secret: "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    type: "request"
+    verifier: "CCCCC"
+
+  dummy_admin_token2:
+    Consumer: dummy_consumer_information1
+    key_string: "DDDDDDDDDDDDDDDD"
+    secret: "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+    type: "access"
+    verifier: "DDDDD"
+
+OAuthMemberToken:
+  dummy_member_token1:
+    Consumer: dummy_consumer_information2
+    Member: first_member
+    key_string: "EEEEEEEEEEEEEEEE"
+    secret: "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+    type: "request"
+    verifier: "EEEEE"
+
+  dummy_member_token2:
+    Consumer: dummy_consumer_information2
+    Member: first_member
+    key_string: "FFFFFFFFFFFFFFFF"
+    secret: "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    type: "access"
+    verifier: "FFFFF"
+
+Banner:
+  dummy_banner1:
+    name: "banner1"
+    is_use_html: false
+    caption: ""
+
+  dummy_banner2:
+    name: "banner2"
+    html: "testtest"
+    is_use_html: true
+
+BannerImage:
+  dummy_banner_image1:
+    File: dummy_file1
+  dummy_banner_image2:
+    File: dummy_file2
+
+BannerUseImage:
+  banner_use_image1:
+    Banner: dummy_banner1
+    BannerImage: dummy_banner_image1
+
+OpenIDTrustLog:
+  dummy_openid_trust_log1:
+    Member: first_member
+    uri: "example.com"
+    uri_key: <?php echo md5("example.com")."\n"; ?>
+    is_permanent: false
+
+SnsTerm:
+  term_friend_pc_frontend:
+    name: "friend"
+    application: "pc_frontend"
+    Translation:
+      ja_JP:
+        value: "フレンド"
+      en:
+        value: "friend"
+
+  term_friend_mobile_frontend:
+    name: "friend"
+    application: "mobile_frontend"
+    Translation:
+      ja_JP:
+        value: "ﾌﾚﾝﾄﾞ"
+      en:
+        value: "friend"
+
+  term_my_friend_pc_frontend:
+    name: "my_friend"
+    application: "pc_frontend"
+    Translation:
+      ja_JP:
+        value: "マイフレンド"
+      en:
+        value: "my friend"
+
+  term_my_friend_mobile_frontend:
+    name: "my_friend"
+    application: "mobile_frontend"
+    Translation:
+      ja_JP:
+        value: "ﾏｲﾌﾚﾝﾄﾞ"
+      en:
+        value: "my friend"
+
+  term_community_pc_frontend:
+    name: "community"
+    application: "pc_frontend"
+    Translation:
+      ja_JP:
+        value: "コミュニティ"
+      en:
+        value: "community"
+
+  term_community_mobile_frontend:
+    name: "community"
+    application: "mobile_frontend"
+    Translation:
+      ja_JP:
+        value: "ｺﾐｭﾆﾃｨ"
+      en:
+        value: "community"
+
+  term_nickname_pc_frontend:
+    name: "nickname"
+    application: "pc_frontend"
+    Translation:
+      ja_JP:
+        value: "ニックネーム"
+      en:
+        value: "nickname"
+
+  term_nickname_mobile_frontend:
+    name: "nickname"
+    application: "mobile_frontend"
+    Translation:
+      ja_JP:
+        value: "ﾆｯｸﾈｰﾑ"
+      en:
+        value: "nickname"
+
+NotificationMail:
+  dummy_notification_mail1:
+    name: "name1"
+    is_enabled: true
+    Translation:
+      ja_JP:
+        title: "title1"
+        template: "template1"
+  dummy_notification_mail2:
+    name: "name2"
+    is_enabled: false
+    Translation:
+      ja_JP:
+        title: "title2"
+        template: "template2"
+
+SkinConfig:
+  skin_config1:
+    plugin: "opSkinDummyPlugin"
+    name: "color_1"
+    value: "#ffffff"
+  skin_config2:
+    plugin: "opSkinDummyPlugin"
+    name: "color_2"
+    value: ""
+
+ActivityData:
+  dummy_activity1:
+    Member: first_member
+    body: "dummy1"
+  dummy_activity2:
+    Member: first_member
+    body: "dummy2"
+    public_flag: 0
+  dummy_activity3:
+    Member: first_member
+    body: "dummy3"
+    public_flag: 2
+  dummy_activity4:
+    Member: first_member
+    body: "dummy4"
+    public_flag: 3
+  dummy_activity5:
+    Member: first_member
+    body: "dummy5"
+    foreign_table: "member_relationship"
+    foreign_id: 1
+  dummy_activity6:
+    Member: first_member
+    body: "dummy6"
+    foreign_table: "member_relationship"
+    foreign_id: 2
+  dummy_activity7:
+    Member: first_member
+    template: "test_template"
+    template_param:
+      "%foo%" : "bar"
+  dummy_activity8:
+    Member: first_member
+    template: "xxxx_template"

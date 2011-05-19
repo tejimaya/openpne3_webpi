@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MSDeploy.iisApp>
+	<!-- install path -->
+	<iisApp path="openpne" />
+
+	<!-- Set Access Permission -->
+	<setAcl path="openpne/cache" setAclUser="anonymousAuthenticationUser" setAclAccess="Modify" />
+
+	<!-- Create MySQL Database-->
+	<dbmysql path="install.sql" commandDelimiter=";" removeCommandDelimiter="true" />
+</MSDeploy.iisApp>

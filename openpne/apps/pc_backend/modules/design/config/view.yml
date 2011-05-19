@@ -1,0 +1,20 @@
+gadgetSuccess:
+  javascripts:
+    - %SF_PROTOTYPE_WEB_DIR%/js/prototype
+    - %SF_PROTOTYPE_WEB_DIR%/js/builder
+    - %SF_PROTOTYPE_WEB_DIR%/js/effects
+
+gadgetPlotSuccess:
+  layout: plain
+  stylesheets: [-backend, gadgetPlot]
+  javascripts: [%SF_PROTOTYPE_WEB_DIR%/js/prototype]
+
+addGadgetSuccess:
+  layout: plain
+  stylesheets: [-backend]
+  javascripts: [%SF_PROTOTYPE_WEB_DIR%/js/prototype]
+
+editGadgetSuccess:
+  layout: plain
+  stylesheets: [-backend]
+  javascripts: [%SF_PROTOTYPE_WEB_DIR%/js/prototype]

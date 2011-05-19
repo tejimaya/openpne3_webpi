@@ -1,0 +1,280 @@
+general:
+  _attributes:
+    Caption: "General Configuration"
+
+  sns_name:
+    Name:     "sns_name"
+    Caption:  "SNS名"
+    FormType: "input"
+    ValueType: "text"
+    Default:   "MySNS"
+    IsRequired: true
+
+  sns_title:
+    Name:      "sns_title"
+    Caption:   "ページタイトル"
+    Help:      "HTML の title 要素の内容になります"
+    FormType:  "input"
+    ValueType: "text"
+    Default:   ""
+    IsRequired: false
+
+  admin_mail_address:
+    Name:      "admin_mail_address"
+    Caption:   "管理者メールアドレス"
+    FormType:  "input"
+    ValueType:  "email"
+    Default:    "sns@example.com"
+    IsRequired: true
+
+  enable_pc:
+    Name:      "enable_pc"
+    Caption:   "PC版使用設定"
+    FormType:  "radio"
+    ValueType: "text"
+    IsRequired: true
+    Default:    1
+    Choices:
+      - "使用しない"
+      - "使用する"
+
+  enable_mobile:
+    Name:      "enable_mobile"
+    Caption:   "携帯版使用設定"
+    FormType:  "radio"
+    ValueType: "text"
+    IsRequired: true
+    Default:    1
+    Choices:
+      - "使用しない"
+      - "使用する"
+
+  enable_friend_link:
+    Name:       "enable_friend_link"
+    Caption:    "フレンドリンク使用設定"
+    FormType:   "radio"
+    ValueType:  "text"
+    IsRequired: true
+    Default:    1
+    Choices:
+      - "使用しない"
+      - "使用する"
+
+  image_max_filesize:
+    Name:        "image_max_filesize"
+    Caption:     "アップロード画像のファイルサイズ制限(bytes)"
+    FormType:    "input"
+    ValueType:   "regexp"
+    ValueRegexp: "/^[1-9]\d*[K|M]?$/"
+    IsRequired:  true
+    Default:     "300K"
+
+  daily_news_day:
+    Name:       "daily_news_day"
+    Caption:    "デイリーニュース受信頻度の設定"
+    Help:       "「毎日」「受信しない」以外の選択肢に設定したときの受信頻度を設定します"
+    FormType:   "checkbox"
+    ValueType:  "text"
+    IsRequired: true
+    Default:    [0, 3]
+    Choices:
+      - "Mon"
+      - "Tue"
+      - "Wed"
+      - "Thu"
+      - "Fri"
+      - "Sat"
+      - "Sun"
+
+  is_use_captcha:
+    Name:       "is_use_captcha"
+    Caption:    "CAPTCHA 使用設定"
+    Help:       "CAPTCHA (画像のなかの文字列をメンバーに入力させる認証方式) を使用するかどうかを設定します"
+    FormType:   "radio"
+    ValueType:  "text"
+    IsRequired: true
+    Default:    1
+    Choices:
+      - "使用しない"
+      - "使用する"
+
+  is_allow_post_activity:
+    Name:       "is_allow_post_activity"
+    Caption:    "アクティビティ投稿設定"
+    Help:       "メンバーからのアクティビティ投稿の可否を設定します"
+    FormType:   "radio"
+    ValueType:  "text"
+    IsRequired: true
+    Default:    1
+    Choices:
+      - "許可しない"
+      - "許可する"
+
+  is_allow_config_public_flag_profile_page:
+    Name:       "is_allow_config_public_flag_profile_page"
+    Caption:    "メンバーのプロフィールページ公開範囲設定"
+    Help:       "メンバーがプロフィールページの公開範囲を変更できるようにするどうかを設定します"
+    FormType:   "radio"
+    ValueType:  "text"
+    IsRequired: true
+    Default:    1
+    Choices:
+      0: "メンバーの設定を許可する"
+      1: "メンバーの設定を許可しない（全員に公開）"
+      4: "メンバーの設定を許可しない（Web全体に公開）"
+
+  is_allow_web_public_flag_age:
+    Name:       "is_allow_web_public_flag_age"
+    Caption:    "Web 全体への年齢公開許可設定"
+    Help:       "メンバーが年齢を Web 全体に公開できるようにするかどうかを設定します"
+    FormType:   "radio"
+    ValueType:  "text"
+    IsRequired: true
+    Default:    0
+    Choices:
+      0: "メンバーの設定を許可しない"
+      1: "メンバーの設定を許可する"
+
+  nickname_of_member_who_does_not_have_credentials:
+    Name:       "nickname_of_member_who_does_not_have_credentials"
+    Caption:    "非SNSユーザー表示名設定"
+    Help:       "非SNSユーザー（退会したユーザーなど）の表示名を設定します"
+    FormType:   "text"
+    ValueType:  "string"
+    IsRequired: false
+    Default:    "-"
+
+external_login_page:
+  _attributes:
+    Caption: "External Login Page Configuration"
+
+  external_pc_login_url:
+    Name:     "external_pc_login_url"
+    Caption:  "PC版外部ログインページURL"
+    Help:     "PC版でログアウトした場合やログインに失敗した場合、ここで指定したURLに遷移します<br />※ここで指定するページにはログインフォームを置いておく必要があります<br />※通常のログインページを使用する場合は空欄にしておきます"
+    FormType: "input"
+    ValueType: "text"
+    Default:   ""
+    IsRequired: false
+
+  external_mobile_login_url:
+    Name:     "external_mobile_login_url"
+    Caption:  "携帯版外部ログインページURL"
+    Help:     "携帯版でログアウトした場合やログインに失敗した場合、ここで指定したURLに遷移します<br />※ここで指定するページにはログインフォームを置いておく必要があります<br />※通常のログインページを使用する場合は空欄にしておきます"
+    FormType: "input"
+    ValueType: "text"
+    Default:   ""
+    IsRequired: false
+
+authentication:
+  _attributes:
+    Caption: "Authentication Configuration"
+
+  enable_registration:
+    Name:      "enable_registration"
+    Caption:   "登録の可否"
+    FormType:  "radio"
+    ValueType: "integer"
+    IsRequired: true
+    Default:    3
+    Choices:
+      3: "PC・携帯両方から登録可"
+      2: "PCからのみ登録可"
+      1: "携帯からのみ登録可"
+      0: "登録一時停止"
+
+mobile:
+  _attributes:
+    Caption: "Mobile Configuration"
+
+  retrieve_uid:
+    Name:      "retrieve_uid"
+    Caption:   "メンバー登録時の携帯個体識別番号取得設定"
+    FormType:  "radio"
+    ValueType: "integer"
+    IsRequired: true
+    Default:    1
+    Choices:
+      3: "PC・携帯登録時に携帯個体識別番号の登録を必須にする"
+      2: "携帯登録時に携帯個体識別番号の登録を必須にする"
+      1: "携帯登録時に携帯個体識別番号を取得する（任意）"
+      0: "携帯登録時には携帯個体識別番号を取得しない"
+  font_size:
+    Name:    "font_size"
+    Caption: "携帯版フォントサイズ指定設定"
+    FormType:  "radio"
+    ValueType: "integer"
+    IsRequired: true
+    Default:    0
+    Choices:
+      1: "フォントサイズを指定する"
+      0: "フォントサイズを指定しない"
+  is_check_mobile_ip:
+    Name:    "is_check_mobile_ip"
+    Caption: "携帯電話のIP帯域設定"
+    FormType:  "radio"
+    ValueType: "integer"
+    IsRequired: true
+    Default:    1
+    Choices:
+      1: "携帯電話のIP帯域をチェックする"
+      0: "携帯電話のIP帯域をチェックしない"
+
+policy:
+  _attributes:
+    Caption: "Site Policy Configuration"
+
+  user_agreement:
+    Name:       "user_agreement"
+    Caption:    "利用規約"
+    FormType:   "textarea"
+    ValueType:  "string"
+    IsRequired: true
+    Default:    "利用規約はただいま準備中です。\nThe User Agreement is under construction."
+  privacy_policy:
+    Name:       "privacy_policy"
+    Caption:    "プライバシーポリシー"
+    FormType:   "textarea"
+    ValueType:  "string"
+    IsRequired: true
+    Default:    "プライバシーポリシーはただいま準備中です。\nThe Privacy Policy is under construction."
+
+footer:
+  _attributes:
+    Hidden: true
+
+  footer_before:
+    Name:       "footer_before"
+    Caption:    "ログイン前フッター"
+    FormType:   "textarea"
+    ValueType:  "string"
+    IsRequired: false
+    Default:    "Powered by <a href=\"http://www.openpne.jp/\" target=\"_blank\">OpenPNE</a>"
+  footer_after:
+    Name:       "footer_after"
+    Caption:    "ログイン後フッター"
+    FormType:   "textarea"
+    ValueType:  "string"
+    IsRequired: false
+    Default:    "Powered by <a href=\"http://www.openpne.jp/\" target=\"_blank\">OpenPNE</a>"
+
+permit_member_config:
+
+api_keys:
+  _attributes:
+    Caption: "API キーの設定"
+
+  google_maps_api_key:
+    Name:       "google maps api key"
+    Caption:    "google maps api key"
+    FormType:   "text"
+    ValueType:  "string"
+    IsRequired: false
+    Default:    ""
+  google_AJAX_search_api_key:
+    Name:       "google AJAX search api key"
+    Caption:    "google AJAX search api key"
+    FormType:   "text"
+    ValueType:  "string"
+    IsRequired: false
+    Default:    ""

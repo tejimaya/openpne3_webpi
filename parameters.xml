@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+	<parameter name="AppPath" defaultValue="Default Web Site/openpne" tags="iisapp">
+		<parameterEntry type="ProviderPath" scope="iisapp" match="openpne" />
+	</parameter>
+
+	<!-- Configure permission settings -->
+	<parameter name="SetAclParameter1" defaultValue="{AppPath}/cache" tags="Hidden">
+		<parameterEntry type="ProviderPath" scope="setAcl" match="openpne/cache$" />
+	</parameter>
+
+	<!-- Set values in /config/OpenPNE.yml to configure OpenPNE -->
+	<!-- OpenPNE Home URL (to save the URL for the WebMatrix) -->
+	<parameter name="OpenPNE_HOME_URL" friendlyName="OpenPNE のホームの URL"
+		description="以下で入力した URL が OpenPNE のホームとなります。"
+		defaultValue="http://www.example.com" tags="OpenPNE_HOME_URL,NoStore" />
+	
+	<!-- Copy OpenPNE_HOME_URL automatically to the OpenPNE.yml file. -->
+	<parameter name="Automatic OpenPNE_HOME_URL" defaultValue="base_url: '{OpenPNE_HOME_URL}'" tags="Hidden">
+		<parameterEntry type="TextFile" scope="openpne\\config\\OpenPNE.yml$" match="base_url: '[^']*'" />
+	</parameter>
+
+	<parameter name="MAIL_DOMAIN" friendlyName="メールの送信に使用するドメイン"
+		description="メールの送信に使用するドメイン (example.com など) を指定して下さい。"
+		defaultValue="example.com" tags="NoStore,MAIL_DOMAIN">
+	</parameter>
+	<parameter name="Automatic MAIL_DOMAIN" defaultValue="mail_domain: '{MAIL_DOMAIN}'" tags="NoStore,Hidden">
+		<parameterEntry type="TextFile" scope="openpne\\config\\OpenPNE.yml$" match="mail_domain: '[^']*'" />
+	</parameter>
+
+	<!-- Configure /config/databases.yml for database settings-->
+	<!--  Database Server --> 
+	<parameter name="DbServer" defaultValue="localhost" tags="MySQL,dbServer">
+		<parameterEntry type="TextFile" scope="install.sql" match="PlaceholderForServer" />
+	</parameter>
+	<parameter name="Automatic DbServer" defaultValue="host={DbServer}'" tags="MySQL,Hidden">
+		<parameterEntry type="TextFile" scope="openpne\\config\\databases.yml$" match="host=localhost'" />
+	</parameter>
+
+	<!--  Database Name -->
+	<parameter name="DbName" defaultValue="openpne" tags="MySQL,dbName">
+		<parameterValidation type="RegularExpression" validationString="^\w{1,16}$" />
+		<parameterEntry type="TextFile" scope="install.sql" match="PlaceholderForDb" />
+	</parameter>
+	<parameter name="Automatic DbName" defaultValue="dbname={DbName};" tags="MySQL,Hidden">
+		<parameterEntry type="TextFile" scope="openpne\\config\\databases.yml$" match="dbname=openpne;" />
+	</parameter>
+
+	<!--  Database User Name -->
+	<parameter name="DbUsername" defaultValue="openpne_user" tags="MySQL,DbUsername">
+		<parameterValidation type="RegularExpression" validationString="^\w{1,16}$" />
+		<parameterEntry type="TextFile" scope="install.sql" match="PlaceholderForUser" />
+	</parameter>
+	<parameter name="Automatic DbUsername" defaultValue="username: {DbUsername}" tags="MySQL,Hidden">
+		<parameterEntry type="TextFile" scope="openpne\\config\\databases.yml$" match="username: root" />
+	</parameter>
+
+	<!--  Database User Password --> 
+	<parameter name="DbUserPassword" tags="New,Password,MySQL,DbUserPassword">
+		<parameterEntry type="TextFile" scope="install.sql" match="PlaceholderForPassword" />
+	</parameter>
+	<parameter name="Automatic DbPassword" defaultValue="password: {DbUserPassword}" tags="MySQL,Hidden">
+		<parameterEntry type="TextFile" scope="openpne\\config\\databases.yml$" match="password: password" />
+	</parameter>
+
+	<parameter name="DbAdminUsername" defaultValue="root" tags="MySQL,DbAdminUsername"></parameter>
+
+	<parameter name="DbAdminPassword" tags="Password,MySQL,DbAdminPassword"></parameter>
+
+    <!-- Connection String -->
+	<parameter name="Connection String" defaultValue="Server={DbServer};Database={DbName};uid={DbAdminUsername};Pwd={DbAdminPassword};" tags="Hidden,MySQLConnectionString,Validate,MySQL">
+		<parameterEntry type="ProviderPath" scope="dbmysql" match="install.sql"/>
+	</parameter>
+</parameters>

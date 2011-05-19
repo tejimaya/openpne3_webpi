@@ -1,0 +1,68 @@
+gadget:
+  name: "ホーム画面"
+  layout:
+    default: layoutA
+    choices: [layoutA, layoutB, layoutC]
+  plot_action: [design, homeGadgetPlot]
+
+profile:
+  name: "プロフィール画面"
+  layout:
+    default: layoutA
+    choices: [layoutA, layoutB, layoutC]
+  plot_action: [design, profileGadgetPlot]
+
+login:
+  name: "ログイン画面"
+  layout:
+    default: layoutA
+    choices: [layoutA, layoutB, layoutC]
+  plot_action: [design, loginGadgetPlot]
+
+sideBanner:
+  name: "サイドバナー"
+  layout:
+    default: layoutD
+  plot_action: [design, sideBannerGadgetPlot]
+
+mobile:
+  name: "携帯版ホーム画面"
+  layout:
+    default: layoutE
+  plot_action: [design, mobileHomeGadgetPlot]
+
+mobileProfile:
+  name: "携帯版プロフィール画面"
+  layout:
+    default: layoutE
+  plot_action: [design, mobileProfileGadgetPlot]
+
+mobileLogin:
+  name: "携帯版ログイン画面"
+  layout:
+    default: layoutD
+  plot_action: [design, mobileLoginGadgetPlot]
+
+mobileHeader:
+  name: "携帯版ヘッダー"
+  layout:
+    default: layoutD
+  plot_action: [design, mobileHeaderGadgetPlot]
+
+mobileFooter:
+  name: "携帯版フッター"
+  layout:
+    default: layoutD
+  plot_action: [design, mobileFooterGadgetPlot]
+
+dailyNews:
+  name: "デイリーニュース（PCメールアドレス向け）"
+  layout:
+    default: layoutD
+  plot_action: [design, dailyNewsGadgetPlot]
+
+mobileDailyNews:
+  name: "デイリーニュース（携帯メールアドレス向け）"
+  layout:
+    default: layoutD
+  plot_action: [design, mobileDailyNewsGadgetPlot]

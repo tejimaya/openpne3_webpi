@@ -1,0 +1,21 @@
+all:
+  is_secure: true
+  credentials: SNSMember
+
+register:
+  is_secure: false
+
+registerInput:
+  is_secure: false
+
+configComplete:
+  is_secure: false
+
+registerMobileToRegisterEnd:
+  is_secure: false
+
+profile:
+  is_secure: both
+
+setSid:
+  is_secure: false

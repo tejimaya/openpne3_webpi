@@ -1,0 +1,1216 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="">
+        <source>home</source>
+        <target>ﾎｰﾑ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>top</source>
+        <target>上へ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>bottom</source>
+        <target>下へ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Login</source>
+        <target>ﾛｸﾞｲﾝ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Logout</source>
+        <target>ﾛｸﾞｱｳﾄ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Registration</source>
+        <target>新規登録</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Error</source>
+        <target>ｴﾗｰ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mail address</source>
+        <target>ﾒｰﾙｱﾄﾞﾚｽ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Password</source>
+        <target>ﾊﾟｽﾜｰﾄﾞ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Register</source>
+        <target>登録</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Save</source>
+        <target>確定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Send</source>
+        <target>送信</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Accept</source>
+        <target>承認</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Reject</source>
+        <target>拒否</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Delete</source>
+        <target>削除</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>More</source>
+        <target>もっと見る</target>
+      </trans-unit>
+       <trans-unit id="">
+        <source>Back</source>
+        <target>戻る</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Makes %friend%</source>
+        <target>%friend%に加える</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Friend% list</source>
+        <target>%Friend%ﾘｽﾄ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Manage %friend%</source>
+        <target>%friend%管理</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Removes this %friend%</source>
+        <target>%friend%から外す</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you delete %0% from %my_friend%?</source>
+        <target>本当に%0%を%my_friend%から外しますか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Community% list with this member</source>
+        <target>参加%Community%ﾘｽﾄ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Profile</source>
+        <target>ﾌﾟﾛﾌｨｰﾙ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Edit profile</source>
+        <target>ﾌﾟﾛﾌｨｰﾙ変更</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Public Flag for Profile Page</source>
+        <target>ﾌﾟﾛﾌｨｰﾙﾍﾟｰｼﾞの公開範囲</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>All Users on the Web</source>
+        <target>Web全体に公開</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>All Members</source>
+        <target>全員に公開</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%my_friend%</source>
+        <target>%my_friend%まで公開</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Only Open to %my_friend%</source>
+        <target>%my_friend%まで公開</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Private</source>
+        <target>公開しない</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Register mobile</source>
+        <target>携帯電話を登録する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Setting easy login</source>
+        <target>かんたんﾛｸﾞｲﾝ設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Settings</source>
+        <target>設定変更</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Invite friends for %1%</source>
+        <target>友人を%1%に招待する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Edit %community%</source>
+        <target>%community%の編集</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Create %community%</source>
+        <target>%community%の作成</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Join %community%</source>
+        <target>%community%に参加する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Quit %community%</source>
+        <target>%community%を退会する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Community% Members</source>
+        <target>%Community%ﾒﾝﾊﾞｰ</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Everyone can join</source>
+        <target>誰でも参加できる</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Community%'s admin authorization needed</source>
+        <target>%Community%管理者の承認が必要</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have received the request to take over administrator of "%1%".</source>
+        <target>「%1%」の管理者交代依頼を受け取っています。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Take over this %community%'s administrator to this member</source>
+        <target>管理権を渡す</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You are taking over this %community%'s administrator to this member now.</source>
+        <target>管理権交代依頼中</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Take over administrator of this community</source>
+        <target>管理者交代依頼</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Request this %community%'s sub-administrator to this member</source>
+        <target>副管理者を依頼する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You are requesting this %community%'s sub-administrator to this member now.</source>
+        <target>副管理者依頼中</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Demotion from this %community%'s sub-administrator</source>
+        <target>副管理者から降格</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Request the sub-administrator of this community</source>
+        <target>副管理者依頼</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Demotion sub-administrator of this %community%</source>
+        <target>副管理人から降格</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you demotion %0% from this %community%'s sub-administrator?</source>
+        <target>%0%を副管理者から降格してもよろしいですか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Description</source>
+        <target>説明文</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Login Failed.</source>
+        <target>ﾛｸﾞｲﾝに失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Can't access this page.</source>
+        <target>このﾍﾟｰｼﾞにはｱｸｾｽできません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Please select the item from the menu.</source>
+        <target>ﾒﾆｭｰから設定したい項目を選択してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Successful in invite.</source>
+        <target>送信が完了しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Invite is not available.</source>
+        <target>招待が許可されていません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This member is already %my_friend%.</source>
+        <target>既に%my_friend%です。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Friend% does not exist.</source>
+        <target>%Friend%がいません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You are already joined to this %community%.</source>
+        <target>既に%community%に参加済みです。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have already sent the participation request to this %community%.</source>
+        <target>既に%community%に参加申請済みです。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You are waiting for the participation approval by %community%'s administrator.</source>
+        <target>%community%管理者による参加承認待ちです。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The administrator doesn't leave the %community%.</source>
+        <target>%community%管理者は退会することができません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You don't join this %community% yet.</source>
+        <target>%community%に参加していません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Community% does not exist.</source>
+        <target>%Community%がありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Community% member does not exist.</source>
+        <target>%Community%ﾒﾝﾊﾞｰがいません。</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Do you drop %0% from this %community%?</source>
+        <target>%0%さんをこの%community%から本当に退会させますか?</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mobile UID is already setting.</source>
+        <target>個体識別番号が登録されています。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Setting mobile UID.</source>
+        <target>携帯個体識別番号を登録します。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your mobile UID was not registered.</source>
+        <target>個体識別番号を登録できませんでした。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your mobile UID was set successfully.</source>
+        <target>個体識別番号が登録されました。</target> 
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your mobile UID was deleted successfully.</source>
+        <target>個体識別番号を削除しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You register mobile UID.</source>
+        <target>携帯電話を登録します。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Prease input your password, press "%1%" button.</source>
+        <target>ﾊﾟｽﾜｰﾄﾞを入力して、「%1%」ﾎﾞﾀﾝを押してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This is your page other member see.</source>
+        <target>他のﾒﾝﾊﾞｰから見たあなたのﾍﾟｰｼﾞはこのようになります。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>If you edit profile, access %1%.</source>
+        <target>ﾌﾟﾛﾌｨｰﾙを変更する場合は%1%よりおこなえます。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Can view this page with mobile only.</source>
+        <target>このページには携帯電話からのみアクセスできます。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The page for pc is here.</source>
+        <target>PC版ページはこちら</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Received from the %friend% link message from %1%!</source>
+        <target>%1%から%friend%申請がきています！</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%1% send request for participation to %2%.</source>
+        <target>%1%から%2%への参加申請がきています</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>if you already registered mail address, mail address is overwrited to new data.</source>
+        <target>ﾒｰﾙｱﾄﾞﾚｽが登録されている場合、新しいﾒｰﾙｱﾄﾞﾚｽに変更されます。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Click following URL, please. You can register in %1%.</source>
+        <target>以下のURLから%1%に登録してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Delete your %1% account</source>
+        <target>%1%を退会する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You can not delete your account.</source>
+        <target>IDが1のﾒﾝﾊﾞｰは退会することができません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you delete your %1% account?</source>
+        <target>本当に%1%から退会しますか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Please input your password if you want to delete your account.</source>
+        <target>退会する場合はﾊﾟｽﾜｰﾄﾞを入力してください｡</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This member already belongs to %my_friend%.</source>
+        <target>このﾒﾝﾊﾞｰは既に%my_friend%です｡</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%Friend% request is already sent.</source>
+        <target>既に%Friend%申請済みです。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have requested %friend% link.</source>
+        <target>%friend%申請が完了しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This member is not your %friend%.</source>
+        <target>%friend%ではありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Add %my_friend%</source>
+        <target>%my_friend%に追加</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Message</source>
+        <target>ﾒｯｾｰｼﾞ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Submit</source>
+        <target>送信</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>General Configuration</source>
+        <target>一般的な設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Public Flag Configuration</source>
+        <target>公開範囲設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>PC E-mail Address Configuration</source>
+        <target>PCﾒｰﾙｱﾄﾞﾚｽ設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>PC E-mail Address</source>
+        <target>PCﾒｰﾙｱﾄﾞﾚｽ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>PC E-mail Address (Confirm)</source>
+        <target>PCﾒｰﾙｱﾄﾞﾚｽ(確認)</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mobile E-mail Address Configuration</source>
+        <target>携帯ﾒｰﾙｱﾄﾞﾚｽ設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mobile E-mail Address</source>
+        <target>携帯ﾒｰﾙｱﾄﾞﾚｽ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mobile E-mail Address (Confirm)</source>
+        <target>携帯ﾒｰﾙｱﾄﾞﾚｽ(確認)</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Password Configuration</source>
+        <target>ﾊﾟｽﾜｰﾄﾞ設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Password</source>
+        <target>ﾊﾟｽﾜｰﾄﾞ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Password (Confirm)</source>
+        <target>ﾊﾟｽﾜｰﾄﾞ(確認)</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Password must be 6-12 characters.</source>
+        <target>ﾊﾟｽﾜｰﾄﾞは6～12文字の半角英数で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Access Block Configuration</source>
+        <target>ｱｸｾｽﾌﾞﾛｯｸ設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Access Block</source>
+        <target>ｱｸｾｽﾌﾞﾛｯｸ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your current password</source>
+        <target>現在のﾊﾟｽﾜｰﾄﾞ</target>
+      </trans-unit>
+      <trans-unit id=""> 
+        <source>Back to previous page</source>
+        <target>前のﾍﾟｰｼﾞに戻る</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Message(Arbitrary)</source>
+        <target>ﾒｯｾｰｼﾞ(任意)</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Photo</source>
+        <target>写真</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Show Photo</source>
+        <target>写真を見る</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Edit Photo</source>
+        <target>写真編集</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Main Photo</source>
+        <target>ﾒｲﾝ写真</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>There are no photos.</source>
+        <target>写真は登録されていません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%1%'s Profile</source>
+        <target>%1%さんのﾌﾟﾛﾌｨｰﾙ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Expansion</source>
+        <target>大</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%community% Name</source>
+        <target>%community%名</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Date Created</source>
+        <target>開設日</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Administrator</source>
+        <target>管理者</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Sub Administrator</source>
+        <target>副管理者</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Count of Members</source>
+        <target>ﾒﾝﾊﾞｰ数</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Search</source>
+        <target>検索</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Create a new %community%</source>
+        <target>%community%作成</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Search Communities</source>
+        <target>ｺﾐｭﾆﾃｨ検索</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Categories</source>
+        <target>ｶﾃｺﾞﾘ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your search queries did not match any communities.</source>
+        <target>該当するｺﾐｭﾆﾃｨはありませんでした。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>All categories</source>
+        <target>すべてのｶﾃｺﾞﾘ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%nickname%</source>
+        <target>%nickname%</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Search Members</source>
+        <target>ﾒﾝﾊﾞｰ検索</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your search queries did not match any members.</source>
+        <target>該当するメンバーはいませんでした。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>delete this %community%.if you delete this %community% please to report in advance for all this %community% members.</source>
+        <target>この%community%を削除します。この%community%を削除する場合は、事前にこの%community%のメンバーに報告してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Delete</source>
+        <target>削除</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Delete this %community%</source>
+        <target>%community%を削除する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you delete this %community%?</source>
+        <target>削除してよろしいですか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Yes</source>
+        <target>はい</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>No</source>
+        <target>いいえ</target>
+      </trans-unit>
+      <trans-unit>
+        <source>%0% is required field.</source>
+        <target>%0%は必須項目です。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Please Select</source>
+        <target>選択してください</target>
+      </trans-unit>
+
+      <trans-unit id="">
+        <source>Invalid.</source>
+        <target>正しくありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Required.</source>
+        <target>必須項目です。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>CSRF attack detected.</source>
+        <target>前の画面を読み直して、操作をやり直してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" does not match the date format (%date_format%).</source>
+        <target>%date_format%形式で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The date must be before %max%.</source>
+        <target>%max%以前にしてください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The date must be after %min%.</source>
+        <target>%min%以降にしてください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The begin date must be before the end date.</source>
+        <target>開始日時は終了日時の前にしてください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>File is too large (maximum is %max_size% bytes).</source>
+        <target>ﾌｧｲﾙｻｲｽﾞが大きすぎます。(最大 %max_size% bytes まで)</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Invalid mime type (%mime_type%).</source>
+        <target>ﾌｧｲﾙ形式が間違っています。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The uploaded file was only partially uploaded.</source>
+        <target>ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞに失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Missing a temporary folder.</source>
+        <target>ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞに失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Failed to write file to disk.</source>
+        <target>ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞに失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>File upload stopped by extension.</source>
+        <target>ﾌｧｲﾙ拡張子が対応していません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Unexpected extra form field named "%field%".</source>
+        <target>正しくありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The form submission cannot be processed. It probably means that you have uploaded a file that is too big.</source>
+        <target>送信に失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" is not an integer.</source>
+        <target>整数ではありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" is not a number.</source>
+        <target>数値ではありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" must be less than %max%.</source>
+        <target>%max%以下にしてください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" must be greater than %min%.</source>
+        <target>%min%以上にしてください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" is too long (%max_length% characters max).</source>
+        <target>%max_length%文字以内で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" is too short (%min_length% characters min).</source>
+        <target>%min_length%文字以上で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>password is too long (%max_length% characters max).</source>
+        <target>%max_length%文字以内で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>password is too short (%min_length% characters min).</source>
+        <target>%min_length%文字以上で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>"%value%" does not match the time format (%time_format%).</source>
+        <target>%time_format%形式で入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>invalid e-mail address</source>
+        <target>ﾒｰﾙｱﾄﾞﾚｽが無効です</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Manage member</source>
+        <target>ﾒﾝﾊﾞｰ管理</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Drop this member</source>
+        <target>退会させる</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Detail of %community%</source>
+        <target>%community%詳細</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>An object with the same "%column%" already exist.</source>
+        <target>その %column% は既に使われています。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Send E-mail that has a photo to use as your image.</source>
+        <target>ﾒｰﾙを送信して写真を登録してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Send E-mail</source>
+        <target>ﾒｰﾙ送信</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Delete Photo</source>
+        <target>写真削除</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you delete this photo?</source>
+        <target>この写真を削除しますか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Edit %community% Photo</source>
+        <target>%community%写真編集</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This %community% doesn't have a photo.</source>
+        <target>まだ%community%に写真が登録されていません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Send E-mail that has a photo to use as %community%'s image.</source>
+        <target>ﾒｰﾙを送信して%community%の写真を登録してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This %community% already has a photo. If you want to register a new one, you must delete this photo.</source>
+        <target>既に%community%に写真が登録されています。新しい写真を登録したい場合は、古い画像を削除してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Happy Birthday!</source>
+        <target>今日は誕生日です</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>It is member's birthday soon.</source>
+        <target>もうすぐ誕生日です</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Please login to visit this page</source>
+        <target>このﾍﾟｰｼﾞを見るにはﾛｸﾞｲﾝが必要です</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Man</source>
+        <target>男性</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Female</source>
+        <target>女性</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Hokkaido</source>
+        <target>北海道</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Aomori</source>
+        <target>青森県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Iwate</source>
+        <target>岩手県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Miyagi</source>
+        <target>宮城県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Akita</source>
+        <target>秋田県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Yamagata</source>
+        <target>山形県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Fukushima</source>
+        <target>福島県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Ibaraki</source>
+        <target>茨城県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Tochigi</source>
+        <target>栃木県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Gunma</source>
+        <target>群馬県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Saitama</source>
+        <target>埼玉県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Chiba</source>
+        <target>千葉県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Tokyo</source>
+        <target>東京都</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Kanagawa</source>
+        <target>神奈川県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Niigata</source>
+        <target>新潟県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Toyama</source>
+        <target>富山県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Ishikawa</source>
+        <target>石川県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Fukui</source>
+        <target>福井県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Yamanashi</source>
+        <target>山梨県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Nagano</source>
+        <target>長野県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Gifu</source>
+        <target>岐阜県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Shizuoka</source>
+        <target>静岡県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Aichi</source>
+        <target>愛知県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mie</source>
+        <target>三重県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Shiga</source>
+        <target>滋賀県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Kyoto</source>
+        <target>京都府</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Osaka</source>
+        <target>大阪府</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Hyogo</source>
+        <target>兵庫県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Nara</source>
+        <target>奈良県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Wakayama</source>
+        <target>和歌山県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Tottori</source>
+        <target>鳥取県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Shimane</source>
+        <target>島根県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Okayama</source>
+        <target>岡山県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Hiroshima</source>
+        <target>広島県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Yamaguchi</source>
+        <target>山口県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Tokushima</source>
+        <target>徳島県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Kagawa</source>
+        <target>香川県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Ehime</source>
+        <target>愛媛県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Kochi</source>
+        <target>高知県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Fukuoka</source>
+        <target>福岡県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Saga</source>
+        <target>佐賀県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Nagasaki</source>
+        <target>長崎県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Kumamoto</source>
+        <target>熊本県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Oita</source>
+        <target>大分県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Miyazaki</source>
+        <target>宮崎県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Kagoshima</source>
+        <target>鹿児島県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Okinawa</source>
+        <target>沖縄県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Sex</source>
+        <target>性別</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Birthday</source>
+        <target>誕生日</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Country</source>
+        <target>国または地域</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Region</source>
+        <target>都市（都道府県や州など）</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Region in Japan</source>
+        <target>都道府県</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Postal Code</source>
+        <target>郵便番号</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Telephone Number</source>
+        <target>電話番号</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Self Introduction</source>
+        <target>自己紹介</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notify of Your Registering</source>
+        <target>登録完了のお知らせ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mail Configuration</source>
+        <target>ﾒｰﾙ設定</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Daily News</source>
+        <target>ﾃﾞｲﾘｰ･ﾆｭｰｽ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Don't Send</source>
+        <target>送信しない</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>[1]Send once a week (%2%)|[2]Send twice a week (%2%)|(2,+Inf]Send %1% times a week (%2%)</source>
+        <target>[1]週1回送信する (%2%)|[2]週2回送信する (%2%)|(2,+Inf]週%1%回送信する (%2%)</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Send Everyday</source>
+        <target>毎日送信する</target>
+      </trans-unit>
+     <trans-unit id="">
+       <source>You have the following pending requests. Select "Accept" or "Reject".</source>
+       <target>以下の承認待ちのﾘｸｴｽﾄがあります。承認または拒否を選択してください。</target>
+     </trans-unit>
+     <trans-unit id="">
+       <source>You don't have any pending requests</source>
+       <target>承認待ちのﾘｸｴｽﾄがありません</target>
+     </trans-unit>
+     <trans-unit id="">
+       <source>Accept</source>
+       <target>承認</target>
+     </trans-unit>
+     <trans-unit id="">
+       <source>Reject</source>
+       <target>拒否</target>
+     </trans-unit>
+     <trans-unit id="">
+       <source>Confirmation List</source>
+       <target>承認待ち一覧</target>
+     </trans-unit>
+      <trans-unit id="">
+        <source>You have just accepted %friend% link request.</source>
+        <target>%friend%ﾘﾝｸを承認しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just rejected %friend% link request.</source>
+        <target>%friend%ﾘﾝｸを拒否しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Go to Confirmation Page</source>
+        <target>承認待ち一覧画面へ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You've gotten %1% %friend% requests</source>
+        <target>%1% 件の%friend%申請があります</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You've gotten %1% %community% sub-administrator requests</source>
+        <target>%1% 件の%community%副管理者依頼があります</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Pending %friend% link requests</source>
+        <target>%friend%ﾘﾝｸ承認待ち</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You've gotten %1% one's %community% joining requests</source>
+        <target>%1% 件の%community%参加申請があります</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You've gotten %1% %community% administrator taking over requests</source>
+        <target>%1% 件の%community%管理者交代依頼があります</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You've gotten %1% %community% administrator taking over requests</source>
+        <target>%1% 件の%community%管理者交代依頼があります</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just accepted joining to %1%</source>
+        <target>%1% への参加を承認しました</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just rejected joining to %1%</source>
+        <target>%1% への参加を拒否しました</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Pending %community% joining requests</source>
+        <target>%community%参加申請承認待ち</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just accepted taking over %community%</source>
+        <target>%community%管理者交代を承認しました</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just rejected taking over %community%</source>
+        <target>%community%管理者交代を拒否しました</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Pending %community% administrator taking over requests</source>
+        <target>%community%管理者交代依頼</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just accepted request of %community% sub-administrator</source>
+        <target>%community%副管理者依頼を承認しました</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just rejected request of %community% sub-administrator</source>
+        <target>%community%副管理者依頼を拒否しました</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Pending %community% sub-administrator requests</source>
+        <target>%community%副管理者依頼</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Join to "%1%"</source>
+        <target>「%1%」に参加する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you really join to the following %community%?</source>
+        <target>本当に以下の%community%に参加しますか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just joined to this %community%.</source>
+        <target>%community%に参加しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Quit "%1%"</source>
+        <target>「%1%」から退会する</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you really quit the following %community%?</source>
+        <target>本当に以下の%community%から退会しますか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>You have just quitted this %community%.</source>
+        <target>%community%から退会しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Can not access your account?</source>
+        <target>ﾛｸﾞｲﾝできない方はこちら</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Public Flag for Age</source>
+        <target>年齢の公開範囲</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>less than 5 seconds ago</source>
+        <target>5秒以内</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>less than 10 seconds ago</source>
+        <target>10秒以内</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>less than 20 seconds ago</source>
+        <target>20秒以内</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>half a minute ago</source>
+        <target>30秒以内</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>less than a minute ago</source>
+        <target>1分以内</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>1 minute ago</source>
+        <target>1分前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%minutes% minutes ago</source>
+        <target>%minutes%分前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>about 1 hour ago</source>
+        <target>1時間前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>about %hours% hours ago</source>
+        <target>%hours%時間前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>1 day ago</source>
+        <target>1日前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%days% days ago</source>
+        <target>%days%日前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>about 1 month ago</source>
+        <target>1ヶ月前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%months% months ago</source>
+        <target>%months%ヶ月前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>about 1 year ago</source>
+        <target>1年前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>over %years% years ago</source>
+        <target>%years%年以上前</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>My %activity%</source>
+        <target>自分の%activity%</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%activity% of %my_friend%</source>
+        <target>%my_friend%の%activity%</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%activity% of %0%</source>
+        <target>%0%の%activity%</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>There is no %activity%.</source>
+        <target>%activity%がありません。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Do you delete this %activity%?</source>
+        <target>この%activity%を削除してもよろしいですか？</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>An %activity% was deleted.</source>
+        <target>%activity%を削除しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Failed to post %activity%.</source>
+        <target>%activity%の投稿に失敗しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>SNS Member's %activity%</source>
+        <target>SNSﾒﾝﾊﾞｰの%activity%</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Link outside URL</source>
+        <target>外部URLへのリンク</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>This url is the outside of %0%.</source>
+        <target>このURLは%0%の外です。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Use Proxy Site for Mobile</source>
+        <target>携帯用のｺﾝﾃﾝﾂ変換を利用</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Direct link</source>
+        <target>直接ﾘﾝｸ</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Send this URL by E-mail</source>
+        <target>ﾒｰﾙでURLを送る</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

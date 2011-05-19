@@ -1,0 +1,48 @@
+Profile:
+  profile_sex:
+    name: "op_preset_sex"
+    is_required: 1
+    form_type: "select"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 0
+    default_public_flag: 1
+    sort_order: 110
+
+  profile_birthday:
+    name: "op_preset_birthday"
+    is_required: 0
+    form_type: "date"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 0
+    default_public_flag: 1
+    sort_order: 120
+
+  profile_region:
+    name: "op_preset_region"
+    is_required: 0
+    form_type: "region_select"
+    value_type: "JP"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 0
+    default_public_flag: 1
+    sort_order: 125
+
+  profile_self_intro:
+    name: "op_preset_self_introduction"
+    is_required: 0
+    form_type: "textarea"
+    value_type: "string"
+    is_disp_regist: 1
+    is_disp_config: 1
+    is_disp_search: 1
+    is_edit_public_flag: 0
+    default_public_flag: 1
+    sort_order: 130

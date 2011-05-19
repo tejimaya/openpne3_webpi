@@ -1,0 +1,21 @@
+homeSuccess:
+  customize:
+    cautionAboutFriendPre:
+      template: [friend, cautionAboutFriendPre]
+      parts   : [information]
+      target  : [bottom]
+    cautionAboutCommunityMemberPre:
+      template    : [community, cautionAboutCommunityMemberPre]
+      parts       : [information]
+      target      : [bottom]
+      is_component: true
+    cautionAboutChangeAdminRequest:
+      template    : [community, cautionAboutChangeAdminRequest]
+      parts       : [information]
+      target      : [bottom]
+      is_component: true
+    cautionAboutSubAdminRequest:
+      template    : [community, cautionAboutSubAdminRequest]
+      parts       : [information]
+      target      : [bottom]
+      is_component: true

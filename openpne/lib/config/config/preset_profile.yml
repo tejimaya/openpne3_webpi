@@ -1,0 +1,196 @@
+# category_name:
+#   setting_name:
+#     Name:       "sample"
+#     Caption:    "Sample"
+#     FormType:   "input"
+#     ValueType:  "string"
+#     IsRegist:   true
+#     IsConfig:   true
+#     IsRequired: true
+
+sex:
+  Name: "sex"
+  Caption: "Sex"
+  FormType: "select"
+  ValueType: "string"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicFlag: true
+  DefaultPublicFlag: 0
+  Choices:
+    "F" : "Female"
+    "M" : "Man"
+
+birthday:
+  Name: "birthday"
+  Caption: "Birthday"
+  FormType: "date"
+  ValueType: "string"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicFlag: true
+  DefaultPublicFlag: 0
+  Params:
+    "max" : "now"
+    "mix" : "-100years"
+
+country:
+  Name: "country"
+  Caption: "Country"
+  FormType: "country_select"
+  ValueType: "string"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region:
+  Name: "region"
+  Caption: "Region"
+  FormType: "region_select"
+  ValueType: "string"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_JP:
+  Name: "region"
+  Caption: "Region in Japan"
+  FormType: "region_select"
+  ValueType: "JP"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_US:
+  Name: "region"
+  Caption: "Region in USA"
+  FormType: "region_select"
+  ValueType: "US"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_GB:
+  Name: "region"
+  Caption: "Region in UK"
+  FormType: "region_select"
+  ValueType: "GB"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_CA:
+  Name: "region"
+  Caption: "Region in Canada"
+  FormType: "region_select"
+  ValueType: "CA"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_DE:
+  Name: "region"
+  Caption: "Region in Germany"
+  FormType: "region_select"
+  ValueType: "DE"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_FR:
+  Name: "region"
+  Caption: "Region in France"
+  FormType: "region_select"
+  ValueType: "FR"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_IT:
+  Name: "region"
+  Caption: "Region in Italy"
+  FormType: "region_select"
+  ValueType: "IT"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+region_CN:
+  Name: "region"
+  Caption: "Region in China"
+  FormType: "region_select"
+  ValueType: "CN"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicflag: true
+  DefaultPublicflag: 0
+
+postal_code:
+  Name: "postal_code"
+  Caption: "Postal Code"
+  FormType: "text"
+  ValueType: "string"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicFlag: true
+  DefaultPublicFlag: 0
+
+telephone_number:
+  Name: "telephone_number"
+  Caption: "Telephone Number"
+  FormType: "text"
+  ValueType: "regexp"
+  ValueRegexp: "/^[0-9\(\)\- ]+$/"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicFlag: true
+  DefaultPublicFlag: 0
+
+self_introduction:
+  Name: "self_introduction"
+  Caption: "Self Introduction"
+  FormType: "textarea"
+  ValueType: "string"
+  IsRegist: true
+  IsConfig: true
+  IsSearch: true
+  IsRequired: false
+  IsEditPublicFlag: true
+  DefaultPublicFlag: 0

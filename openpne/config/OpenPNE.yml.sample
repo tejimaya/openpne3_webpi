@@ -1,0 +1,234 @@
+######################################
+# 基本設定 (Basic)
+######################################
+
+# SNS の URL
+# URL of the SNS
+base_url: "http://example.com"
+
+######################################
+# メール (Mail)
+######################################
+
+# SNS からのメール送信に使うドメイン
+# Domain to use for sending e-mail from the SNS
+mail_domain: "example.com"
+
+# メール投稿アドレスにメンバー毎にユニークなハッシュを含める
+# Contain an individual hash for an e-mail address that is used to post something to the SNS
+is_mail_address_contain_hash: true
+
+# メール投稿アドレスのハッシュの長さ
+# Length of hash for an e-mail address for posting
+mail_address_hash_length: 12
+
+# SNS から送信するメールの Envelope From (Return-Path ヘッダ) に指定するアドレス
+# Envelope From (Return-Path header) address for sending e-mail from the SNS
+#mail_envelope_from: "return@example.com"
+
+# SNS から SMTP 経由でメールを送信する場合の SMTP サーバのホスト名
+# Hostname of the SMTP server for sending e-mail via SMTP
+#mail_smtp_host: "smtp.example.com"
+
+# SNS から SMTP 経由でメールを送信する場合の SMTP の設定
+# Config of the SMTP for sending e-mail via SMTP
+#mail_smtp_config:
+#  auth:     "login"
+#  username: "myusername"
+#  password: "password"
+#  ssl:      "tls"
+#  port:     587
+
+# メールテンプレートに機能制限をおこなうかどうか
+# Add restriction to mail templates
+is_restrict_mail_template: true
+
+######################################
+# キー設定 (Keys)
+######################################
+
+# A secret for generating CSRF token (You should change this if you want to run OpenPNEs on multiple servers)
+# CSRF トークンを生成するためのシークレット (複数 Web サーバで OpenPNE を動作させる場合、この設定を変更する必要があります)
+#csrf_secret: ""
+
+# A secret for generating sid token
+sid_secret: "<?php echo filemtime(__FILE__) ?>"
+
+######################################
+# セッション (Session)
+######################################
+
+# セッションストレージ設定 (Configure Session storage)
+#   name の値には、 file, database, memcache の他、任意のセッションストレージクラス名が使用できます
+#   ("file", "database", "memcached" and any class names of session storage class as value of "name")
+#   database を選択した場合、扱えるセッション ID の文字列長 128 までとなります。必要に応じて session.hash_function と session.hash_bits_per_character の値を調節してください
+#   (If you use "database", you can handle 128 length session id. Tune session.hash_function and session.hash_bits_per_character for your needs)
+session_storage:
+  name: "file"
+  options:
+
+# セッション存続時間設定
+# Configure session lifetimes
+session_life_time:
+  # PC 版設定
+  # for pc_frontend
+  pc_frontend:
+    # セッションの有効期限(秒)
+    # The maximum idle time
+    idletime: 432000 # 5 days
+
+  # 携帯版設定
+  # for mobile_frontend
+  mobile_frontend:
+    # セッションの有効期限(秒)
+    # The maximum idle time
+    idletime: 3600 # 1 hour
+
+  # 管理画面設定
+  # for pc_backend
+  pc_backend:
+    # セッションの有効期限(秒)
+    # The maximum idle time
+    idletime: 86400 # 1 day
+
+# 「自動的にログイン」の持続時間
+remember_login_limit: 2592000 # 30 days
+
+# セッションデータにサイト特有の識別子を含めるかどうか
+# Configuration of using site_identifier in session data
+check_session_site_identifier: true
+
+######################################
+# SSL
+######################################
+
+# 特定ページでの SSL を使用するかどうか
+# Configuration of using SSL
+use_ssl: false
+
+# SSL用URL (Cookie の値を引き継ぐため、 base_url と同一ドメイン・パスである必要があります)
+# Base URL for SSL (Set same domain and same path with "base_url" configuration to take over a value of Cookie)
+ssl_base_url:
+  pc_frontend: "https://example.com"
+  mobile_frontend: "https://example.com"
+  pc_backend: "https://example.com"
+
+# SSL が必須なアプリケーション
+# Applications that are SSL required
+ssl_required_applications: ["pc_backend"]
+
+# SSL が必須なアクション
+# Actions that are SSL required
+ssl_required_actions:
+
+  # PC 版設定
+  # for pc_frontend
+  pc_frontend: ["member/register", "member/registerInput", "member/registerEnd", "member/editProfile", "member/config", "member/login", "member/logout", "member/invite"]
+
+  # 携帯版設定
+  # for mobile_frontend
+  mobile_frontend: ["member/register", "member/registerInput", "member/registerEnd", "member/editProfile", "member/config", "member/login", "member/logout", "member/invite", "member/configUID"]
+
+  # 管理画面設定
+  # for pc_backend
+  pc_backend: []
+
+# SSL を使用するかどうかをメンバーが選択できるアクション
+# Actions that are SSL selectable by SNS member
+ssl_selectable_actions:
+
+  # PC 版設定
+  # for pc_frontend
+  pc_frontend: []
+
+  # 携帯版設定
+  # for mobile_frontend
+  mobile_frontend: []
+
+  # 管理画面設定
+  # for pc_backend
+  pc_backend: []
+
+######################################
+# 画像 (Images)
+######################################
+
+# ImageMagick 使用設定 (Configuration of using ImageMagick)
+#   0: off - ImageMagick を使わない (Don't use ImageMagick)
+#   1: on  - GIF のみ ImageMagick を使う (Use ImageMagick only for GIF)
+#   2: on  - JEPG,PNG,GIF に ImageMagick を使う (ただし、 GD も必要) (Use ImageMagick for JPEG,PNG,GIF)
+use_imagemagick: 0
+
+# ImageMagick コマンドのパス
+# Path to ImageMagick binary
+imagemagick_path: '/usr/bin/convert'
+#imagemagick_path: '"C:\Program Files\ImageMagick-6.2.5-Q16\convert"'
+
+# 画像生成クラス設定 (Configuration of class for image-generating)
+#   この設定を有効にすると、 use_imagemagick の設定を無視して任意のクラスで画像を生成します。
+#   (If this configuration is enabled, OpenPNE generates image by using the specified class avoid "use_imagemagick")
+#   使用されるクラス名は、 sfImageGenerator[image_generator_name] となります
+#   (OpenPNE use a class that is named as "sfImageGenerator[image_generator_name]")
+#image_generator_name: "GD"
+
+# 画像ストレージ設定 (Configuration of using storage for storing image) [experimental; unsupported yet (実験的な機能・未サポート)]
+image_storage: Default  # DB に画像バイナリを保存します (Store image binaries in DB)
+#image_storage: Filesystem  # ファイルシステム上の任意のディレクトリに画像バイナリを保存します (Store image binaries to any directories in filesystem)
+
+# 画像ストレージに Filesystem を選択した場合の画像保存先ディレクトリのパス (Web サーバからの書き込み権限が必要) [experimental; unsupported yet (実験的な機能・未サポート)]
+# Path to directory for storing images if a value of "image_storage" is "Filesystem" (Need to write permission from Web server)
+#image_storage_filesystem_master_dir: '/path/to/directory'
+
+######################################
+# データベース (Database)
+######################################
+
+# テーブル名のプレフィックス (例: table_prefix: "op_")
+# Table name prefix (e.g: table_prefix: "op_")
+table_prefix: ""
+
+# Query Cache および Result Cacheのキープレフィックス (例: doctrine_cache_key_prefix: "op_")
+# Key prefix of Query Cache & Result Cache (e.g: doctrine_cache_key_prefix: "op_")
+doctrine_cache_key_prefix: ""
+
+######################################
+# プロキシ (Proxy)
+######################################
+
+# インターネット接続に使用するプロキシ (ホスト名:ポート番号)
+# Proxy to access the Internet (hostname:port)
+http_proxy: ""
+
+####################################
+# 言語設定
+####################################
+
+# 対応言語
+supported_languages: ['en', 'ja_JP']
+
+####################################
+# プラグインチャンネルサーバ設定
+####################################
+
+# デフォルトで使用するチャンネルサーバ
+# default_plugin_channel_server: "plugins.openpne.jp"
+
+# プラグインリストのベース URL
+# plugin_list_base_url: "http://plugins.openpne.jp/packages/"
+
+###########################################
+# モバイル自動リンク設定 (Mobile Auto link)
+###########################################
+
+# モバイルで自動リンクするタイプ
+# all, urls, email_addresses, phone_numbers
+#
+# default_mobile_auto_link_type: ['urls']
+
+# 外部URLを自動リンクするか
+# default_mobile_auto_link_is_allow_outer_url: true
+
+# モバイルから外部のURLを利用する際に利用するプロキシ
+# Proxys is used when member link outer URL at the mobile
+mobile_proxys:
+  'Google' : 'http://www.google.co.jp/gwt/x?u='

@@ -1,0 +1,80 @@
+informationBox:
+  caption:
+    ja_JP: "インフォメーションボックス"
+  description:
+    ja_JP: "お知らせなどの通知が可能なインフォメーションボックスを設置できます。"
+  viewable_privilege: 4
+  component: [default, informationBox]
+  config:
+    value:
+      Name:       "value"
+      Caption:    "内容"
+      FormType:   "rich_textarea"
+      ValueType:  "text"
+      IsRequired: false
+
+languageSelecterBox:
+  caption:
+    ja_JP: "言語切り替えボックス"
+  description:
+    ja_JP: "他の言語に切り替えるために必要なボックスを設置できます。"
+  viewable_privilege: 4
+  component: [default, languageSelecterBox]
+
+sideBanner:
+  caption:
+    ja_JP: "サイドバナー"
+  description:
+    ja_JP: "バナー設定のサイドバナーを設置できます。"
+  component: [default, sideBanner]
+
+rssBox:
+  caption:
+    ja_JP: "RSS リーダー"
+  description:
+    ja_JP: "指定された URL の RSS フィードを表示します"
+  viewable_privilege: 4
+  component: [default, rssBox]
+  config:
+    title:
+      Name:       "title"
+      Caption:    "タイトル"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+    url:
+      Name:       "url"
+      Caption:    "URL"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+
+linkListBox:
+  caption:
+    ja_JP: "リンク集"
+  description:
+    ja_JP: "指定されたリンクのリストを表示します"
+  viewable_privilege: 4
+  component: [default, linkListBox]
+  config:
+    title:
+      Name:       "title"
+      Caption:    "タイトル"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+<?php for ($i = 1; $i <= 10; $i++): ?>
+    url<?php echo $i ?>:
+      Name:       "url<?php echo $i ?>"
+      Caption:    "URL<?php echo $i ?>"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+    text<?php echo $i ?>:
+      Name:       "text<?php echo $i ?>"
+      Caption:    "リンクテキスト<?php echo $i ?>"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+<?php endfor; ?>
+

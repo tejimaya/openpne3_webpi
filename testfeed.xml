@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<version>1.0.0.0</version>
+	<title>Sample Application for WebPI v3 RTW Feed</title>
+
+	<updated>2011-03-1T00:000:00Z</updated>
+	<author>
+		<name>Sample Application Builder</name>
+		<uri></uri>
+	</author>
+
+	<entry type="application">
+		<productId>sampleapp</productId>
+		<title>Sample Application</title>
+		<id>http://www.microsoft.com/web/webpi/3.0/SampleAppJa</id>
+		<summary>Application Sample</summary>
+		<longSummary>Application Sample</longSummary>
+		<version>1.0</version>
+		<images>
+			<icon></icon>
+		</images>
+		<updated>2009-10-5T18:30:02Z</updated>
+		<published>2009-10-5T18:30:02Z</published>
+		<author>
+			<name>Sample Application</name>
+			<uri></uri>
+		</author>
+		<keywords>
+			<keywordId>oss</keywordId>
+			<keywordId>PHP</keywordId>
+			<keywordId>MySQL</keywordId>
+		</keywords>
+		<dependency>
+			<and>
+				<dependency idref="PHPApp" />
+				<dependency>
+					<productId>MySQLConnector</productId>
+				</dependency>
+			</and>
+		</dependency>
+		<installers>
+			<installer>
+				<id>1</id>
+				<languageId>ja</languageId>
+				<osList idref="SupportedAppPlatforms" />
+				<installerFile>
+					<fileSize>10240</fileSize>
+					<installerURL>http://webpi.jrillet.dazai.pne.jp/openpne.zip</installerURL>
+					<sha1>8FF3ADC290A29DD12BFFFC2AC383D4B581ED3519</sha1>
+
+				</installerFile>
+				<helpLink></helpLink>
+				<msDeploy>
+					<startPage></startPage>
+				</msDeploy>
+			</installer>
+		</installers>
+	</entry>
+
+  <!-- Tabs and Keywords -->
+	<tabs>
+		<tab>
+			<keywordTab>
+				<id>oss</id>
+				<name>Sample App</name>
+				<description>Select from sample applications:</description>
+				<keywords>
+					<keywordId>oss</keywordId>
+				</keywords>
+			</keywordTab>
+		</tab>
+	</tabs>
+	<keywords>
+		<keyword id="oss">OSS Apps</keyword>
+	</keywords>
+
+	<oses>
+		<os id="PreVistaNoHomeBasic">
+			<maximumVersion>
+				<osMajorVersion>5</osMajorVersion>
+			</maximumVersion>
+			<osTypes>
+				<Server />
+				<HomePremium />
+				<Ultimate />
+				<Enterprise />
+				<Business />
+			</osTypes>
+		</os>
+		<os id="VistaSP1PlusNoHomeBasic">
+			<minimumVersion>
+				<osMajorVersion>6</osMajorVersion>
+				<osMinorVersion>0</osMinorVersion>
+				<spMajorVersion>1</spMajorVersion>
+			</minimumVersion>
+			<osTypes>
+				<Server />
+				<HomePremium />
+				<Ultimate />
+				<Enterprise />
+				<Business />
+			</osTypes>
+		</os>
+	</oses>
+
+	<osLists>
+    <!-- support xp sp2+ (no server core) -->
+		<osList id="SupportedAppPlatforms">
+			<os>
+				<minimumVersion>
+					<osMajorVersion>5</osMajorVersion>
+					<osMinorVersion>1</osMinorVersion>
+					<spMajorVersion>2</spMajorVersion>
+				</minimumVersion>
+				<osTypes>
+					<Server />
+					<Client />
+				</osTypes>
+			</os>
+			<os idref="PreVistaNoHomeBasic" />
+			<os idref="VistaSP1PlusNoHomeBasic" />
+		</osList>
+	</osLists>
+       
+	<dependencies>
+    <!-- We do not support PHP for IIS 5.1 anymore -->
+		<dependency id="IISForPHP">
+			<or>
+        <!--IIS 6.0-->
+				<dependency>
+					<and>
+            <!--IIS-->
+						<dependency>
+							<productId>IIS60</productId>
+						</dependency>
+            <!--FastCGI-->
+						<dependency>
+							<productId>FastCGIIIS6</productId>
+						</dependency>
+					</and>
+				</dependency>
+				<dependency>
+					<and>
+						<dependency>
+							<productId>StaticContent</productId>
+						</dependency>
+						<dependency>
+							<productId>DefaultDocument</productId>
+						</dependency>
+						<dependency>
+							<productId>DirectoryBrowse</productId>
+						</dependency>
+						<dependency>
+							<productId>HTTPErrors</productId>
+						</dependency>
+						<dependency>
+							<productId>HTTPLogging</productId>
+						</dependency>
+						<dependency>
+							<productId>LoggingTools</productId>
+						</dependency>
+						<dependency>
+							<productId>RequestMonitor</productId>
+						</dependency>
+						<dependency>
+							<productId>RequestFiltering</productId>
+						</dependency>
+						<dependency>
+							<productId>StaticContentCompression</productId>
+						</dependency>
+						<dependency>
+							<productId>IISManagementConsole</productId>
+						</dependency>
+						<dependency>
+							<productId>CGI</productId>
+						</dependency>
+            <!--URL Rewriter-->
+						<dependency>
+							<or>
+								<dependency>
+									<productId>UrlRewrite2</productId>
+								</dependency>
+								<dependency>
+									<productId>UrlRewrite</productId>
+								</dependency>
+								<dependency>
+									<productId>UrlRewrite10</productId>
+								</dependency>
+								<dependency>
+									<productId>UrlRewrite2Beta</productId>
+								</dependency>
+							</or>
+						</dependency>
+					</and>
+				</dependency>
+			</or>
+		</dependency>
+   
+		<dependency id="PHPApp">
+			<and>
+				<dependency>
+					<or>
+						<dependency>
+							<and>
+								<dependency idref="IISForPHP" />
+								<dependency>
+									<productId>PHP52</productId>
+								</dependency>
+								<dependency>
+									<productId>WinCache52</productId>
+								</dependency>
+							</and>         
+						</dependency>
+            <!-- PHP on IIS Express dependency -->
+						<dependency>
+							<and>
+								<dependency>
+									<or>
+										<dependency>
+											<productId>WebMatrix</productId>
+										</dependency>
+										<dependency>
+											<productId>WebMatrix_v1Refresh</productId>
+										</dependency>
+									</or>
+								</dependency>
+								<dependency>
+									<productId>PHP52ForIISExpress</productId>
+								</dependency>
+							</and>
+						</dependency>
+					</or>
+				</dependency>
+				<dependency>
+					<or>
+						<dependency>
+							<productId>WDeployNOSMO</productId>
+						</dependency>
+						<dependency>
+							<productId>WDeploy_v2</productId>
+						</dependency>
+						<dependency>
+							<productId>WDeploy</productId>
+						</dependency>
+					</or>
+				</dependency>
+			</and>
+		</dependency>
+	</dependencies>
+
+</feed>

@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="">
+        <source>Notification of Confirmation of Changing Your PC E-mail Address</source>
+        <target>PCメールアドレス変更確認メール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Confirmation of Changing Your Mobile E-mail Address</source>
+        <target>携帯メールアドレス変更確認メール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Confirmation of Changing Password</source>
+        <target>パスワード再発行メール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Someone's Joining Your Community</source>
+        <target>コミュニティ参加お知らせメール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Completion of Friend Link</source>
+        <target>フレンドリンク承認完了メール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Login URL</source>
+        <target>携帯版ログインURLお知らせメール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Completion of Your Registration</source>
+        <target>登録完了メール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Completion of Leaving From the SNS</source>
+        <target>退会完了メール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Registration URL</source>
+        <target>新規登録URLお知らせメール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Signature</source>
+        <target>署名</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Daily News</source>
+        <target>デイリー・ニュース</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Notification of Friend Birthday</source>
+        <target>フレンドの誕生日お知らせメール</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Login</source>
+        <target>ログイン</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Saved configuration successfully.</source>
+        <target>設定を正常に保存しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Sent a mail for your mail address. Please click URL in the mail for completing configuration.</source>
+        <target>メールを送信しました。メール内の URL をクリックして設定を完了してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>The public_flag for your age can be configure at "Settings" page.</source>
+        <target>年齢の公開範囲は「設定変更」ページにて設定することができます。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Age</source>
+        <target>年齢</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>%1% years old</source>
+        <target>%1% 歳</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Captcha</source>
+        <target>確認キーワード</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Please input the below keyword.</source>
+        <target>上に表示されているキーワードを入力してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Invalid mobile_address.</source>
+        <target>メールアドレスが無効です。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Mon</source>
+        <target>月</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Tue</source>
+        <target>火</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Wed</source>
+        <target>水</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Thu</source>
+        <target>木</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Fri</source>
+        <target>金</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Sat</source>
+        <target>土</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Sun</source>
+        <target>日</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

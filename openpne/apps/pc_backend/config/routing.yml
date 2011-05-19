@@ -1,0 +1,48 @@
+# openpne rules
+homepage:
+  url:   /
+  param: { module: default, action: top }
+
+# mail rules
+mail_config:
+  url:  /mail
+  param: { module: mail, action: config }
+
+mail_template:
+  url:  /mail/edit
+  param: { module: mail, action: template }
+  requirements:
+    sf_method: [get]
+
+mail_template_specified:
+  url:  /mail/edit/:name
+  param: { module: mail, action: template }
+
+# oauth rules
+oauth_request_token:
+  url:   /oauth/request_token
+  param: { module: oauth, action: requestToken }
+
+oauth_authorize_token:
+  url:   /oauth/authorize
+  param: { module: oauth, action: authorizeToken }
+
+oauth_access_token:
+  url:   /oauth/access_token
+  param: { module: oauth, action: accessToken }
+
+# connection rules
+connection:
+  class: opStandardRouteCollection
+  options: { model: OAuthConsumerInformation, actions: [show, new, create, edit, update, deleteConfirm, delete] }
+
+connection_list:
+  url:     /connection
+  param:   { module: connection, action: list }
+
+default_template_help:
+  url:  /help_template_format
+  param: { module: default, action: templateHelp }
+  requirements:
+    sf_method: [get]
+

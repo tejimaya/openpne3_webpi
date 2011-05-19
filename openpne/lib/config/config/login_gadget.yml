@@ -1,0 +1,79 @@
+loginForm:
+  caption:
+    ja_JP: "ログインフォーム"
+  description:
+    ja_JP: "ログイン用のフォームを設置できます。利用可能なすべての認証モード用のログインフォームがすべて含まれています。"
+  viewable_privilege: 4
+  component: [default, loginFormBox]
+
+freeArea:
+  caption:
+    ja_JP: "フリーエリア"
+  description:
+    ja_JP: "フリーエリアを設置できます"
+  viewable_privilege: 4
+  component: [default, freeAreaBox]
+  config:
+    title:
+      Name:       "title"
+      Caption:    "タイトル"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+    value:
+      Name:       "value"
+      Caption:    "内容"
+      FormType:   "rich_textarea"
+      ValueType:  "text"
+      IsRequired: false
+
+rssBox:
+  caption:
+    ja_JP: "RSS リーダー"
+  description:
+    ja_JP: "指定された URL の RSS フィードを表示します"
+  viewable_privilege: 4
+  component: [default, rssBox]
+  config:
+    title:
+      Name:       "title"
+      Caption:    "タイトル"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+    url:
+      Name:       "url"
+      Caption:    "URL"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+
+linkListBox:
+  caption:
+    ja_JP: "リンク集"
+  description:
+    ja_JP: "指定されたリンクのリストを表示します"
+  viewable_privilege: 4
+  component: [default, linkListBox]
+  config:
+    title:
+      Name:       "title"
+      Caption:    "タイトル"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+<?php for ($i = 1; $i <= 10; $i++): ?>
+    url<?php echo $i ?>:
+      Name:       "url<?php echo $i ?>"
+      Caption:    "URL<?php echo $i ?>"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+    text<?php echo $i ?>:
+      Name:       "text<?php echo $i ?>"
+      Caption:    "リンクテキスト<?php echo $i ?>"
+      FormType:   "input"
+      ValueType:  "text"
+      IsRequired: false
+<?php endfor; ?>
+
